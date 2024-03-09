@@ -8,13 +8,15 @@ public class AiEnemy : MonoBehaviour
     public GameObject Player;
     public float speed;
 
-    public string kan_angribe;
-    public string kan_ikke_angribe;
-    public string kan_ikke_se;
-    public string kan_se;
+    public string Attack;
+    public string Se;
 
-    public float detectionRadius = 5f;
+    public float attackdetectionRadius = 1f;
     private bool playerInRange = false;
+    public float attackSpace = 0.5f;
+    public float detectionRadius = 20f;
+    private bool playerSeInRange = false;
+    
 
     Animator anim;
 
@@ -30,10 +32,22 @@ public class AiEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = Vector2.Distance(transform.position, Player.transform.position);
-        Vector2 direction = Player.transform.forward - transform.forward;
 
-        transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
+        if (playerSeInRange)
+        {
+            distance = Vector2.Distance(transform.position, Player.transform.position);
+            Vector2 direction = Player.transform.forward - transform.forward;
+
+            transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
+
+            if (distance <= attackSpace)
+            {
+
+            }
+
+            WalkAnimation();
+        }
+        
 
 
         // kører funktionerne som gør at den chekker om den attacke
@@ -50,13 +64,27 @@ public class AiEnemy : MonoBehaviour
         {
             float distanceToPlayer = Vector2.Distance(transform.position, Player.transform.position);
 
-            if (distanceToPlayer <= detectionRadius)
+            if (distanceToPlayer <= attackdetectionRadius)
             {
                 playerInRange = true;
             }
             else
             {
                 playerInRange = false;
+            }
+        }
+
+        if (Player != null)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, Player.transform.position);
+            // Den tjekker om den er inden for den se radisu og om den ikke er for tæt på 
+            if (attackSpace <= distanceToPlayer && distanceToPlayer <= detectionRadius)
+            {
+                playerSeInRange = true;
+            }
+            else
+            {
+                playerSeInRange = false;
             }
         }
     }
@@ -67,12 +95,24 @@ public class AiEnemy : MonoBehaviour
         
         if (playerInRange)
         {
-            anim.SetTrigger(kan_angribe);
+            anim.SetBool("Attack", true);
         }
         else
         {
-            anim.SetTrigger(kan_ikke_angribe);
+            anim.SetBool("Attack", false);
         }
     }
 
+
+    void WalkAnimation()
+    {
+        if (playerSeInRange)
+        {
+            anim.SetBool("Se", true);
+        }
+        else
+        {
+            anim.SetBool("Se", false);
+        }
+    }
 }
