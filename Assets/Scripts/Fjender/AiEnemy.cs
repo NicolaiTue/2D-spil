@@ -10,13 +10,15 @@ public class AiEnemy : MonoBehaviour
 
     public string Attack;
     public string Se;
+    public int tooSteepAngle = 12;
 
     public float attackdetectionRadius = 1f;
     private bool playerInRange = false;
     public float attackSpace = 0.5f;
     public float detectionRadius = 20f;
     private bool playerSeInRange = false;
-    
+
+    private int newz = 0;
 
     Animator anim;
 
@@ -35,19 +37,24 @@ public class AiEnemy : MonoBehaviour
 
         if (playerSeInRange)
         {
+            WalkAnimation();
+
             distance = Vector2.Distance(transform.position, Player.transform.position);
             Vector2 direction = Player.transform.forward - transform.forward;
 
             transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
-
-            if (distance <= attackSpace)
+            if(transform.rotation.z > tooSteepAngle || transform.rotation.z < -1 * tooSteepAngle)
             {
-
+                transform.rotation.z.Equals(newz);
             }
 
-            WalkAnimation();
+            
         }
-        
+        else
+        {
+            anim.SetBool("Se", false);
+        }
+
 
 
         // kører funktionerne som gør at den chekker om den attacke
