@@ -8,9 +8,14 @@ public class AiEnemy : MonoBehaviour
     public GameObject Player;
     public float speed;
 
-    public string tæt_på_player;
+    public string kan_angribe;
+    public string kan_ikke_angribe;
+    public string kan_ikke_se;
+    public string kan_se;
+
     public float detectionRadius = 5f;
     private bool playerInRange = false;
+
     Animator anim;
 
 
@@ -62,7 +67,11 @@ public class AiEnemy : MonoBehaviour
         
         if (playerInRange)
         {
-            anim.SetTrigger(tæt_på_player);
+            anim.SetTrigger(kan_angribe);
+        }
+        else
+        {
+            anim.SetTrigger(kan_ikke_angribe);
         }
     }
 
