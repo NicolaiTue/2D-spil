@@ -50,10 +50,7 @@ public class AiEnemy : MonoBehaviour
                 transform.rotation.z.Equals(newz);
             }
         }
-        else
-        {
-            anim.SetBool("Se", false);
-        }
+       
 
         // kører funktionerne som gør at den chekker om den attacke
         CheckForPlayer();
