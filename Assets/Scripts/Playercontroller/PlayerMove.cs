@@ -8,17 +8,29 @@ public class PlayerMove : MonoBehaviour
 {
     private float horizontal;
     private float speed = 8f;
+    public float setSpeed = 1;
     private float jumpingPower = 16f;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Animator animator;
 
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Update()
     {
         //modtager input fra højre og venstre ved at tage input axis som bliver defineret i project settings
         horizontal = Input.GetAxisRaw("Horizontal");
+
+
+        //giver speed værdien til animatoren så den kan lave animation når man bevæger sig.
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("JumpHeight", Mathf .Abs(rb.velocity.y));
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -31,6 +43,7 @@ public class PlayerMove : MonoBehaviour
         }
         //køre flip funktionen
         Flip();
+        
     }
 
     private void FixedUpdate()
