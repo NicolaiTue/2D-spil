@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AiEnemy : MonoBehaviour
 {
+    public PlayerMove playerScript;
 
     public GameObject Player;
     public float speed;
@@ -55,7 +56,7 @@ public class AiEnemy : MonoBehaviour
             anim.SetBool("Se", false);
         }
 
-
+        Flip();
 
         // kører funktionerne som gør at den chekker om den attacke
         CheckForPlayer();
@@ -121,5 +122,19 @@ public class AiEnemy : MonoBehaviour
         {
             anim.SetBool("Se", false);
         }
+    }
+    void Flip()
+    {
+        Vector3 localScale = transform.localScale;
+        
+        if (playerScript.localScale.x != localScale.x)
+        {
+            print("check");
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+        
+
+        
     }
 }

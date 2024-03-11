@@ -12,6 +12,8 @@ public class PlayerMove : MonoBehaviour
     private float jumpingPower = 16f;
     public bool isFacingRight = true;
 
+    public Vector3 localScale;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -56,13 +58,13 @@ public class PlayerMove : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private void Flip()
+    public void Flip()
     {
         //den tjekker om du gør til højre på x aksen eller venstre. 0 er midtpunktet. hvis du går til den ene eler den anden side flipper den.
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
             isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
+            localScale = transform.localScale;
             //minus gange minus giver plus. ved det koncept kan man skifte om tallet skal være positivt eller negativt, og roter spilleren på den givende akse i endten minus eller plus.
             localScale.x *= -1f;
             transform.localScale = localScale;
