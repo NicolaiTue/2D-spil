@@ -23,7 +23,6 @@ public class AiEnemy : MonoBehaviour
 
     Animator anim;
 
-
     private float distance;
 
     // Start is called before the first frame update
@@ -35,28 +34,26 @@ public class AiEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (playerSeInRange)
         {
             WalkAnimation();
 
             distance = Vector2.Distance(transform.position, Player.transform.position);
-            Vector2 direction = Player.transform.forward - transform.forward;
+            Vector2 direction = Player.transform.position - transform.position;
+
+            // Skift retningen baseret på spillerens position
+            Flip(direction.x);
 
             transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
-            if(transform.rotation.z > tooSteepAngle || transform.rotation.z < -1 * tooSteepAngle)
+            if (transform.rotation.z > tooSteepAngle || transform.rotation.z < -1 * tooSteepAngle)
             {
                 transform.rotation.z.Equals(newz);
             }
-
-            
         }
         else
         {
             anim.SetBool("Se", false);
         }
-
-        Flip();
 
         // kører funktionerne som gør at den chekker om den attacke
         CheckForPlayer();
@@ -100,7 +97,6 @@ public class AiEnemy : MonoBehaviour
 
     void UpdateAnimation()
     {
-        
         if (playerInRange)
         {
             anim.SetBool("Attack", true);
@@ -123,18 +119,20 @@ public class AiEnemy : MonoBehaviour
             anim.SetBool("Se", false);
         }
     }
-    void Flip()
-    {
-        Vector3 localScale = transform.localScale;
-        
-        if (playerScript.localScale.x != localScale.x)
-        {
-            print("check");
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
-        
 
-        
+    void Flip(float horizontalDirection)
+    {
+        // Skift retningen af fjendens sprite baseret på spillerens position
+        if ((horizontalDirection > 0 && !facingRight) || (horizontalDirection < 0 && facingRight))
+        {
+            facingRight = !facingRight;
+
+            // Spejl fjendens sprite
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
     }
+
+    private bool facingRight = false;
 }
