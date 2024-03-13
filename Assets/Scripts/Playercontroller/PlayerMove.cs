@@ -82,6 +82,14 @@ public class PlayerMove : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
+    public void TakeDamageFromEnemy(float damage)
+    {
+        currentHealth -= damage;
+        print(currentHealth);
+        HealthBar.fillAmount = currentHealth / MaxHealth;
+    }
+
     void CheckIfPlayerTakeDamage()
     {
         if (takeDamage)

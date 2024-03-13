@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AiEnemy : MonoBehaviour
@@ -18,6 +19,11 @@ public class AiEnemy : MonoBehaviour
     public float attackSpace = 0.5f;
     public float detectionRadius = 20f;
     private bool playerSeInRange = false;
+
+    public int Damage = 10;
+    public GameObject Våben;
+    
+
 
     private int newz = 0;
 
@@ -69,6 +75,9 @@ public class AiEnemy : MonoBehaviour
             if (distanceToPlayer <= attackdetectionRadius)
             {
                 playerInRange = true;
+
+               
+
             }
             else
             {
@@ -132,4 +141,9 @@ public class AiEnemy : MonoBehaviour
     }
 
     private bool facingRight = false;
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        
+    }
 }

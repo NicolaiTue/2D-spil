@@ -240,7 +240,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -767,6 +767,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 956174569067968752}
+  HealthBar: {fileID: 0}
+  MaxHealth: 100
+  takeDamage: 0
+  testDamage: 80
 --- !u!50 &4111754071750071330
 Rigidbody2D:
   serializedVersion: 4
