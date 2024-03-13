@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
+    //movements
     private float horizontal;
     private float speed = 8f;
     public float setSpeed = 1;
@@ -14,15 +16,25 @@ public class PlayerMove : MonoBehaviour
 
     public Vector3 localScale;
 
+    //Physics and checks
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
 
+    // HP bar
+    [SerializeField] Image HealthBar;
+    public float MaxHealth = 100;
+    public bool takeDamage = false;
+    public float testDamage = 80;
+    float currentHealth;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+        //set health
+        currentHealth = MaxHealth;
     }
     void Update()
     {
@@ -45,7 +57,7 @@ public class PlayerMove : MonoBehaviour
         }
         //køre flip funktionen
         Flip();
-        
+        CheckIfPlayerTakeDamage();
     }
 
     private void FixedUpdate()
@@ -69,5 +81,21 @@ public class PlayerMove : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+    void CheckIfPlayerTakeDamage()
+    {
+        if (takeDamage)
+        {
+
+            TakeDamage();
+            takeDamage = false;
+        }
+    }
+    void TakeDamage()
+    {
+        
+        currentHealth -= testDamage;
+        print(currentHealth);
+        HealthBar.fillAmount = currentHealth/100f;
     }
 }
