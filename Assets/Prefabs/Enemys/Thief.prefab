@@ -224,6 +224,8 @@ GameObject:
   m_Component:
   - component: {fileID: 759270099702220549}
   - component: {fileID: 188626155572820699}
+  - component: {fileID: 3803858332296909231}
+  - component: {fileID: 1496415685719445508}
   m_Layer: 7
   m_Name: dagger
   m_TagString: Untagged
@@ -298,6 +300,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3803858332296909231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266162998964060500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ed5dc85367f2044b766858f74e634e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aienemy: {fileID: 7175454351059508951}
+  playerTag: Player
+--- !u!68 &1496415685719445508
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2266162998964060500}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.108953245, y: 0.21346992}
+  - {x: 0.10104675, y: 0.21346992}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &2509689550942598334
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,8 +431,11 @@ MonoBehaviour:
   Se: 
   tooSteepAngle: 12
   attackdetectionRadius: 1
+  playerInRange: 0
   attackSpace: 0.5
   detectionRadius: 15
+  Damage: 5
+  DMGAllow: 0
 --- !u!50 &874771106477259667
 Rigidbody2D:
   serializedVersion: 4
@@ -1116,6 +1176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 173647178326713851}
   - component: {fileID: 8535294478841874964}
+  - component: {fileID: 4222265000863643540}
+  - component: {fileID: 4328352074511358854}
   m_Layer: 7
   m_Name: dagger
   m_TagString: Untagged
@@ -1190,3 +1252,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4222265000863643540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964653740013041108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ed5dc85367f2044b766858f74e634e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aienemy: {fileID: 7175454351059508951}
+  playerTag: Player
+--- !u!68 &4328352074511358854
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964653740013041108}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.108953245, y: 0.21345466}
+  - {x: 0.10104675, y: 0.21345466}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

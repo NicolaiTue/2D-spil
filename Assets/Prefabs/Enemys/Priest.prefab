@@ -471,8 +471,11 @@ MonoBehaviour:
   Se: 
   tooSteepAngle: 12
   attackdetectionRadius: 1
+  playerInRange: 0
   attackSpace: 0.7
   detectionRadius: 15
+  Damage: 15
+  DMGAllow: 0
 --- !u!50 &3277329222403551020
 Rigidbody2D:
   serializedVersion: 4
@@ -555,6 +558,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3216646333258111475}
   - component: {fileID: 5188153235953056730}
+  - component: {fileID: 3507745866059811217}
+  - component: {fileID: 5347063644197585677}
   m_Layer: 7
   m_Name: weapon
   m_TagString: Untagged
@@ -629,6 +634,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3507745866059811217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755697436485700623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ed5dc85367f2044b766858f74e634e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aienemy: {fileID: 8226352909851722206}
+  playerTag: Player
+--- !u!68 &5347063644197585677
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755697436485700623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.13000004, y: 0.00000047683716}
+  - {x: 0.13000004, y: 0.00000047683716}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &8876266290105588824
 GameObject:
   m_ObjectHideFlags: 0

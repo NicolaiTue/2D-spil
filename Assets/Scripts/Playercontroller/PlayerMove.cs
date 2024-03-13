@@ -58,6 +58,7 @@ public class PlayerMove : MonoBehaviour
         //køre flip funktionen
         Flip();
         CheckIfPlayerTakeDamage();
+        
     }
 
     private void FixedUpdate()
@@ -106,4 +107,8 @@ public class PlayerMove : MonoBehaviour
         print(currentHealth);
         HealthBar.fillAmount = currentHealth/100f;
     }
+
+    
+
+
 }

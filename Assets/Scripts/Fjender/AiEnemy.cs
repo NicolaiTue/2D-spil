@@ -15,14 +15,14 @@ public class AiEnemy : MonoBehaviour
     public int tooSteepAngle = 12;
 
     public float attackdetectionRadius = 1f;
-    private bool playerInRange = false;
+    public bool playerInRange = false;
     public float attackSpace = 0.5f;
     public float detectionRadius = 20f;
     private bool playerSeInRange = false;
 
     public int Damage = 10;
-    public GameObject Våben;
-    
+    public bool DMGAllow = false;
+
 
 
     private int newz = 0;
@@ -74,9 +74,7 @@ public class AiEnemy : MonoBehaviour
 
             if (distanceToPlayer <= attackdetectionRadius)
             {
-                playerInRange = true;
-
-               
+               playerInRange = true;
 
             }
             else
@@ -85,10 +83,13 @@ public class AiEnemy : MonoBehaviour
             }
         }
 
+        //playerScript.TakeDamageFromEnemy(Damage);
+
         if (Player != null)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, Player.transform.position);
-            // Den tjekker om den er inden for den se radisu og om den ikke er for tæt på 
+
+            // Den tjekker om den er inden for  se radisu og om den ikke er for tæt på 
             if (attackSpace <= distanceToPlayer && distanceToPlayer <= detectionRadius)
             {
                 playerSeInRange = true;
@@ -99,7 +100,21 @@ public class AiEnemy : MonoBehaviour
             }
         }
     }
+    
+    public void HitPlayer(Collider2D collision)
+    {
+        playerScript.TakeDamageFromEnemy(10f);
+    }
 
+    public void EnenableAttack()
+    {
+        DMGAllow = true;
+    }
+
+    public void DisableAttack()
+    {
+        DMGAllow = false;
+    }
 
     void UpdateAnimation()
     {
@@ -140,10 +155,7 @@ public class AiEnemy : MonoBehaviour
         }
     }
 
-    private bool facingRight = false;
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        
-    }
+
+    private bool facingRight = false;
 }
