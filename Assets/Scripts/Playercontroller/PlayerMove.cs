@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
     bool isInMenu = false;
     public bool DMGAllow = false;
 
+    public float skade = 10f;
+
     // HP bar
     [SerializeField] Image HealthBar;
     public float MaxHealth = 100;
@@ -146,7 +148,7 @@ public class PlayerMove : MonoBehaviour
     }
     public void HitEnemy(Collider2D collision)
     {
-        aiEnemy.TakeDamageFromPlayer(10f);
+        aiEnemy.TakeDamageFromPlayer(skade);
     }
 
 }
