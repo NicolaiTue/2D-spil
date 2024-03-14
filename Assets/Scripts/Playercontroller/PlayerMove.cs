@@ -21,6 +21,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
+    bool isInMenu = false;
+    public bool DMGAllow = false;
 
     // HP bar
     [SerializeField] Image HealthBar;
@@ -28,6 +30,9 @@ public class PlayerMove : MonoBehaviour
     public bool takeDamage = false;
     public float testDamage = 80;
     float currentHealth;
+
+    //script import
+    AiEnemy aiEnemy;
 
     private void Start()
     {
@@ -58,7 +63,10 @@ public class PlayerMove : MonoBehaviour
         //køre flip funktionen
         Flip();
         CheckIfPlayerTakeDamage();
-        
+        isInAMenu();
+        attack();
+
+
     }
 
     private void FixedUpdate()
@@ -108,7 +116,37 @@ public class PlayerMove : MonoBehaviour
         HealthBar.fillAmount = currentHealth/100f;
     }
 
-    
+    void attack()
+    {
+        if (Input.GetButtonDown("LeftClick") && !isInMenu)
+        {
+            print("you have attacked");
+        }
+    }
+    void isInAMenu()
+    {
+        if (Input.GetButtonDown("Esc") && !isInMenu)
+        {
+            print("menu Opened");
+            isInMenu = true;
+        }
+        else if (Input.GetButtonDown("Esc") && isInMenu)
+        {
+            isInMenu = false;
+        }
+    }
+    public void EnenableAttack()
+    {
+        DMGAllow = true;
+    }
 
+    public void DisableAttack()
+    {
+        DMGAllow = false;
+    }
+    public void HitEnemy(Collider2D collision)
+    {
+        aiEnemy.TakeDamageFromPlayer(10f);
+    }
 
 }
