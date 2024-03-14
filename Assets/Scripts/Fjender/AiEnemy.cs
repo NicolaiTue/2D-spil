@@ -12,6 +12,8 @@ public class AiEnemy : MonoBehaviour
 
     public string Attack;
     public string Se;
+
+    // den vinkel den siger den ikke må værer højere ned ellers retter den sig op igen
     public int tooSteepAngle = 12;
 
     public float attackdetectionRadius = 1f;
@@ -22,6 +24,11 @@ public class AiEnemy : MonoBehaviour
 
     public int Damage = 10;
     public bool DMGAllow = false;
+
+    private float døTimeer = 5f;
+    public string Dø;
+    public float Liv = 100;
+    private float currentLiv;
 
 
 
@@ -61,6 +68,12 @@ public class AiEnemy : MonoBehaviour
         // kører funktionerne som gør at den chekker om den attacke
         CheckForPlayer();
         UpdateAnimation();
+
+        //Tjekker om Enemy har liv tilbage
+        if (currentLiv <= 0)
+        {
+            DieAnaimation();
+        }
     }
 
     void CheckForPlayer()
@@ -103,14 +116,15 @@ public class AiEnemy : MonoBehaviour
     
     public void HitPlayer(Collider2D collision)
     {
-        playerScript.TakeDamageFromEnemy(10f);
+        playerScript.TakeDamageFromEnemy(Damage);
     }
 
+    // gør så våbnet kan gøre skade
     public void EnenableAttack()
     {
         DMGAllow = true;
     }
-
+    // gør så våbnet ikke kan gøre skade
     public void DisableAttack()
     {
         DMGAllow = false;
@@ -141,6 +155,20 @@ public class AiEnemy : MonoBehaviour
         }
     }
 
+    void DieAnaimation()
+    {
+        anim.SetBool("Dø", true);
+
+        døTimeer -= Time.deltaTime;
+
+        if (døTimeer <= 0f)
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
+
     void Flip(float horizontalDirection)
     {
         // Skift retningen af fjendens sprite baseret på spillerens position
@@ -156,6 +184,11 @@ public class AiEnemy : MonoBehaviour
     }
 
 
+
+    public void TakeDamageFromPlayer(float damage)
+    {
+        currentLiv -= damage;
+    }
 
     private bool facingRight = false;
 }
