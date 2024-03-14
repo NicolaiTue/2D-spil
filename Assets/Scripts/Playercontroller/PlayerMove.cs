@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
     bool isInMenu = false;
-    public bool DMGAllow = false;
+    
 
     public float skade = 10f;
 
@@ -33,8 +33,11 @@ public class PlayerMove : MonoBehaviour
     public float testDamage = 80;
     float currentHealth;
 
-    //script import
-    AiEnemy aiEnemy;
+    //DamageToEnemy
+    public int DamageToEnemy = 30;
+
+    // script import
+    public PlayerVåben våben;
 
     private void Start()
     {
@@ -123,7 +126,21 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetButtonDown("LeftClick") && !isInMenu)
         {
             print("you have attacked");
+            animator.SetBool("Attack", true);
+            
+
         }
+    }
+    void sendAttackInfo()
+    {
+        våben.Attack();
+        print("våbnet er dødligt");
+
+    }
+    void disableAttackAnimation()
+    {
+        animator.SetBool("Attack", false);
+        print("våbnet er ikke dødligt");
     }
     void isInAMenu()
     {
@@ -137,18 +154,7 @@ public class PlayerMove : MonoBehaviour
             isInMenu = false;
         }
     }
-    public void EnenableAttack()
-    {
-        DMGAllow = true;
-    }
-
-    public void DisableAttack()
-    {
-        DMGAllow = false;
-    }
-    public void HitEnemy(Collider2D collision)
-    {
-        aiEnemy.TakeDamageFromPlayer(skade);
-    }
+    
+    
 
 }

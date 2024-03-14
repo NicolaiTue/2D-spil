@@ -42,6 +42,7 @@ public class AiEnemy : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        currentLiv = Liv;
     }
 
     // Update is called once per frame
@@ -157,7 +158,7 @@ public class AiEnemy : MonoBehaviour
 
     void DieAnaimation()
     {
-        anim.SetBool("Dø", true);
+        anim.SetTrigger("Dø");
 
         døTimeer -= Time.deltaTime;
 
@@ -183,7 +184,13 @@ public class AiEnemy : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "PlayerWeapon")
+        {
+            TakeDamageFromPlayer(playerScript.DamageToEnemy);
+        }
+    }
 
     public void TakeDamageFromPlayer(float damage)
     {

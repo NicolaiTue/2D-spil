@@ -1027,7 +1027,7 @@ GameObject:
   - component: {fileID: 2644627363257780707}
   m_Layer: 7
   m_Name: Knight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1093,6 +1093,8 @@ MonoBehaviour:
   detectionRadius: 15
   Damage: 30
   DMGAllow: 0
+  "D\xF8": 
+  Liv: 100
 --- !u!61 &8800895350269889418
 BoxCollider2D:
   m_ObjectHideFlags: 0

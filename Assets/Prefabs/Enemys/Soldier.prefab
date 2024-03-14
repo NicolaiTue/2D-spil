@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7719436004861525454}
   m_Layer: 7
   m_Name: Soldier
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,6 +81,8 @@ MonoBehaviour:
   detectionRadius: 15
   Damage: 15
   DMGAllow: 0
+  "D\xF8": 
+  Liv: 100
 --- !u!50 &5950765624632934534
 Rigidbody2D:
   serializedVersion: 4

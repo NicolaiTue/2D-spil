@@ -200,7 +200,7 @@ Transform:
   m_GameObject: {fileID: 1563918178764020076}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 1.83, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -767,10 +767,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 956174569067968752}
+  skade: 10
   HealthBar: {fileID: 0}
   MaxHealth: 100
   takeDamage: 0
   testDamage: 80
+  DamageToEnemy: 30
+  "v\xE5ben": {fileID: 9074305537857296183}
 --- !u!50 &4111754071750071330
 Rigidbody2D:
   serializedVersion: 4
@@ -843,6 +846,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2696849526820819503}
   - component: {fileID: 6808002237047936149}
+  - component: {fileID: 9074305537857296183}
+  - component: {fileID: 4552590680725763326}
   m_Layer: 0
   m_Name: sword
   m_TagString: Untagged
@@ -917,6 +922,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9074305537857296183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8084134428002534753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bc13cf03a44b44a8dfba30bfd847b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMove: {fileID: 7932931832456284674}
+  TargetTag: Enemy
+--- !u!70 &4552590680725763326
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8084134428002534753}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000005044605, y: 0.51520246}
+  m_Size: {x: 0.38000068, y: 0.80860925}
+  m_Direction: 0
 --- !u!1 &8597389972267128512
 GameObject:
   m_ObjectHideFlags: 0

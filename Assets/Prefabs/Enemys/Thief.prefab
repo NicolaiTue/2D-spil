@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 8075072900144715574}
   m_Layer: 7
   m_Name: Thief
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -436,6 +436,8 @@ MonoBehaviour:
   detectionRadius: 15
   Damage: 5
   DMGAllow: 0
+  "D\xF8": 
+  Liv: 100
 --- !u!50 &874771106477259667
 Rigidbody2D:
   serializedVersion: 4

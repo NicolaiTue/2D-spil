@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 8796765810921969654}
   m_Layer: 7
   m_Name: Merchant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1006,6 +1006,8 @@ MonoBehaviour:
   detectionRadius: 15
   Damage: 8
   DMGAllow: 0
+  "D\xF8": 
+  Liv: 100
 --- !u!50 &3975837359183800310
 Rigidbody2D:
   serializedVersion: 4

@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 5699482076640876529}
   m_Layer: 7
   m_Name: Acher
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -923,8 +923,13 @@ MonoBehaviour:
   Se: 
   tooSteepAngle: 12
   attackdetectionRadius: 7
+  playerInRange: 0
   attackSpace: 7
   detectionRadius: 15
+  Damage: 10
+  DMGAllow: 0
+  "D\xF8": 
+  Liv: 100
 --- !u!61 &5699482076640876529
 BoxCollider2D:
   m_ObjectHideFlags: 0
