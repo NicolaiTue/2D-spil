@@ -20,11 +20,15 @@ public class PlayerVåben : MonoBehaviour
     {
         
         
-            swordCollider.enabled = true;
+            
         
     }
     public void Attack()
     {
-
+        swordCollider.enabled = true;
+    }
+    public void finishedAttack()
+    {
+        swordCollider.enabled = false;
     }
 }

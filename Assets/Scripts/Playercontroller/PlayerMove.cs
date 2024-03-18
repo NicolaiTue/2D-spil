@@ -141,6 +141,7 @@ public class PlayerMove : MonoBehaviour
     void disableAttackAnimation()
     {
         animator.SetBool("Attack", false);
+        våben.finishedAttack();
         print("våbnet er ikke dødligt");
     }
     void isInAMenu()
