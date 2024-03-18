@@ -38,6 +38,7 @@ public class PlayerMove : MonoBehaviour
 
     // script import
     public PlayerVåben våben;
+    
 
     private void Start()
     {

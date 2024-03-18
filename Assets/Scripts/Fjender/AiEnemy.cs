@@ -22,7 +22,7 @@ public class AiEnemy : MonoBehaviour
     public float detectionRadius = 20f;
     private bool playerSeInRange = false;
 
-    public int Damage = 10;
+    public float Damage = 10;
     public bool DMGAllow = false;
 
     private float døTimeer = 5f;
