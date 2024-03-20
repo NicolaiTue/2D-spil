@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AiEnemy : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class AiEnemy : MonoBehaviour
     public string Dø;
     public float Liv = 100;
     private float currentLiv;
+    bool canTakeDamage = false;
+    [SerializeField] Image EHealthBar;
 
 
 
@@ -159,17 +162,31 @@ public class AiEnemy : MonoBehaviour
     void DieAnaimation()
     {
         anim.SetTrigger("Dø");
-
-        døTimeer -= Time.deltaTime;
-
-        if (døTimeer <= 0f)
-        {
-            Destroy(gameObject);
-        }
-
-
     }
+    void AfterDeathAnimation()
+    {
+        
+        if (facingRight)
+        {
+            anim.SetTrigger("LiggerDødHøjre");
+            // Spejl fjendens sprite
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
 
+        }
+        else if (!facingRight)
+        {
+            anim.SetTrigger("LiggerDødVenstre");
+
+        }
+        
+        
+    }
+    void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
     void Flip(float horizontalDirection)
     {
         // Skift retningen af fjendens sprite baseret på spillerens position
@@ -188,13 +205,17 @@ public class AiEnemy : MonoBehaviour
     {
         if (collision.tag == "PlayerWeapon")
         {
-            TakeDamageFromPlayer(playerScript.DamageToEnemy);
+            Collider2D swordCollider = collision.GetComponent<Collider2D>();
+            
+                TakeDamageFromPlayer(playerScript.DamageToEnemy);
+            swordCollider.enabled = false;
         }
     }
 
     public void TakeDamageFromPlayer(float damage)
     {
         currentLiv -= damage;
+        EHealthBar.fillAmount = currentLiv / Liv;
     }
 
     private bool facingRight = false;
