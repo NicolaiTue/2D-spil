@@ -187,6 +187,10 @@ public class AiEnemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    void SetDeathSpeed()
+    {
+        speed = 0;
+    }
     void Flip(float horizontalDirection)
     {
         // Skift retningen af fjendens sprite baseret på spillerens position
