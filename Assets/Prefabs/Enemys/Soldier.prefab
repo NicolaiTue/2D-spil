@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 42364631271535899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 161.71437, y: -0.73013985, z: 0}
+  m_LocalPosition: {x: 161.71437, y: -0.73013985, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -83,6 +83,7 @@ MonoBehaviour:
   DMGAllow: 0
   "D\xF8": 
   Liv: 100
+  EHealthBar: {fileID: 0}
 --- !u!50 &5950765624632934534
 Rigidbody2D:
   serializedVersion: 4
