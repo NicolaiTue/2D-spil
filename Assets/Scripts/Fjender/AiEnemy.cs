@@ -32,7 +32,7 @@ public class AiEnemy : MonoBehaviour
     private float currentLiv;
     bool canTakeDamage = false;
     [SerializeField] Image EHealthBar;
-
+    Collider2D ECollider;
 
 
     private int newz = 0;
@@ -45,6 +45,7 @@ public class AiEnemy : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        ECollider = GetComponent<Collider2D>();
         currentLiv = Liv;
     }
 
@@ -77,6 +78,7 @@ public class AiEnemy : MonoBehaviour
         if (currentLiv <= 0)
         {
             DieAnaimation();
+
         }
     }
 
@@ -190,6 +192,7 @@ public class AiEnemy : MonoBehaviour
     void SetDeathSpeed()
     {
         speed = 0;
+        ECollider.enabled = false;
     }
     void Flip(float horizontalDirection)
     {

@@ -164,7 +164,7 @@ MonoBehaviour:
   groundCheck: {fileID: 6978335819914765054}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   animator: {fileID: 483066759545744996}
   canTalkToQuestGiver: 0
   skade: 10
