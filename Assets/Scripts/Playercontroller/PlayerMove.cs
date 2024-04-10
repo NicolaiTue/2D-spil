@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
 {
     //movements
     private float horizontal;
-    private float speed = 8f;
+    public float speed = 8f;
     public float setSpeed = 1;
     private float jumpingPower = 16f;
     public bool isFacingRight = true;
@@ -22,6 +22,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
     bool isInMenu = false;
+    public bool canTalkToQuestGiver = false;
     
 
     public float skade = 10f;
@@ -38,6 +39,7 @@ public class PlayerMove : MonoBehaviour
 
     // script import
     public PlayerVåben våben;
+    public Dialogue dialog;
     
 
     private void Start()
@@ -73,6 +75,27 @@ public class PlayerMove : MonoBehaviour
         attack();
 
 
+    }
+    //Check om man er i nærheden af npc
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "NPC")
+        {
+            canTalkToQuestGiver = true;
+            
+            print("Can talk with Jeff");
+            speed = 0f;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "NPC")
+        {
+            canTalkToQuestGiver = false;
+            print("Can NOT talk with Jeff");
+            
+
+        }
     }
 
     private void FixedUpdate()
