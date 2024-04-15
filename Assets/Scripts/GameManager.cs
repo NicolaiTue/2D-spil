@@ -14,9 +14,12 @@ public class GameManager : MonoBehaviour
     private const string moneyKey = "Money";
     private const string moraleKey = "Morale";
 
+
     // Definition af en statisk begivenhed for at signalere, når pengemængden ændres
     public delegate void MoneyChanged();
     public static event MoneyChanged OnMoneyChanged;
+
+
 
     private void Awake()
     {
@@ -42,6 +45,7 @@ public class GameManager : MonoBehaviour
     {
         money += amount;
         SaveData();
+        OnMoneyChanged?.Invoke(); // Udløser OnMoneyChanged-begivenheden
     }
 
     // metoden der trækker money fra
@@ -49,6 +53,7 @@ public class GameManager : MonoBehaviour
     {
         money -= amount;
         SaveData();
+        OnMoneyChanged?.Invoke(); // Udløser OnMoneyChanged-begivenheden
     }
 
     //  metoden der tilføjer morale
@@ -56,6 +61,7 @@ public class GameManager : MonoBehaviour
     {
         morale += amount;
         SaveData();
+        OnMoneyChanged?.Invoke(); // Udløser OnMoneyChanged-begivenheden
     }
 
     // metoden der trækker morale fra
@@ -63,6 +69,7 @@ public class GameManager : MonoBehaviour
     {
         morale -= amount;
         SaveData();
+        OnMoneyChanged?.Invoke(); // Udløser OnMoneyChanged-begivenheden
     }
 
     // Method to save money and morale to PlayerPrefs
@@ -78,6 +85,7 @@ public class GameManager : MonoBehaviour
     {
         money = PlayerPrefs.GetInt(moneyKey, 0);
         morale = PlayerPrefs.GetInt(moraleKey, 50); // Default morale value of 50
+
     }
 
     // Method to reset money and morale

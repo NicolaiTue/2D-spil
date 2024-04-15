@@ -13,7 +13,7 @@ public class AddMoneyScript : MonoBehaviour
         {
             // Tilføj Moneyamount til money, når objektet aktiveres første gang
             GameManager.instance.AddMoney(Moneyamount);
-            addedMoney = true; // Sæt addedMoney til sandt for at forhindre gentagen tilføjelse af morale
+            addedMoney = true; // Sæt addedMoney til sandt for at forhindre gentagen tilføjelse af money
         }
     }
 }
