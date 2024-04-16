@@ -39,7 +39,7 @@ public class PlayerMove : MonoBehaviour
 
     // script import
     public PlayerVåben våben;
-    public Dialogue dialog;
+    
     
 
     private void Start()
