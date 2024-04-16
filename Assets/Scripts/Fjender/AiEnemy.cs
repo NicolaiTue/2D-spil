@@ -34,6 +34,8 @@ public class AiEnemy : MonoBehaviour
     [SerializeField] Image EHealthBar;
     Collider2D ECollider;
 
+    public int minMoneyOnDeath = 5; // Minimum antal penge, fjenden kan give, når den dør
+    public int maxMoneyOnDeath = 15; // Maksimum antal penge, fjenden kan give, når den dør
 
     private int newz = 0;
 
@@ -187,6 +189,13 @@ public class AiEnemy : MonoBehaviour
     }
     void DestroyObject()
     {
+
+        // Generer et tilfældigt antal penge mellem minMoneyOnDeath og maxMoneyOnDeath
+        int moneyToGive = Random.Range(minMoneyOnDeath, maxMoneyOnDeath + 1); // maxMoneyOnDeath er eksklusivt, derfor +1
+
+        // Tilføj det tilfældige antal penge til GameManager
+        GameManager.instance.AddMoney(moneyToGive);
+
         Destroy(gameObject);
     }
     void SetDeathSpeed()
