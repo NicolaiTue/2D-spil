@@ -51,7 +51,7 @@ namespace Cainos.PixelArtPlatformer_VillageProps
             IsOpened = !IsOpened;
         }
 
-        [FoldoutGroup("Runtime"), Button("Open"), HorizontalGroup("Runtime/Button")]
+        [FoldoutGroup("Runtime"),Button("Open"), HorizontalGroup("Runtime/Button")]
         public void Open()
         {
             IsOpened = true;
