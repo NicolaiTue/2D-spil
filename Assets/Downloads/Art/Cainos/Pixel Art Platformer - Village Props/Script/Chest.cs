@@ -10,6 +10,9 @@ namespace Cainos.PixelArtPlatformer_VillageProps
         [FoldoutGroup("Reference")]
         public Animator animator;
 
+        [FoldoutGroup("Reference")]
+        public GameObject coinPrefab; // Referencen til prefab-objektet af mønten
+
         [FoldoutGroup("Runtime")]
         public bool IsOpened
         {
@@ -18,6 +21,10 @@ namespace Cainos.PixelArtPlatformer_VillageProps
             {
                 isOpened = value;
                 animator.SetBool("IsOpened", isOpened);
+                if (isOpened)
+                {
+                    SpawnCoins();
+                }
             }
         }
         private bool isOpened;
@@ -28,6 +35,10 @@ namespace Cainos.PixelArtPlatformer_VillageProps
 
         // Reference to the player GameObject
         private GameObject player;
+
+        // Antallet af mønter, der skal spawnes
+        [FoldoutGroup("Runtime")]
+        public int numberOfCoinsToSpawn = 2;
 
         private void Start()
         {
@@ -51,7 +62,21 @@ namespace Cainos.PixelArtPlatformer_VillageProps
             IsOpened = !IsOpened;
         }
 
-        [FoldoutGroup("Runtime"),Button("Open"), HorizontalGroup("Runtime/Button")]
+        // Function to spawn coins when the chest is opened
+        private void SpawnCoins()
+        {
+            for (int i = 0; i < numberOfCoinsToSpawn; i++)
+            {
+                // Generate random offsets for x and y positions
+                float xOffset = Random.Range(-0.5f, 0.5f); // Adjust the range as needed
+                float yOffset = Random.Range(-0.5f, 0.5f); // Adjust the range as needed
+
+                // Spawn coin prefabs based on numberOfCoinsToSpawn
+                Instantiate(coinPrefab, transform.position + new Vector3(xOffset, yOffset, 0), Quaternion.identity);
+            }
+        }
+
+        [FoldoutGroup("Runtime"), Button("Open"), HorizontalGroup("Runtime/Button")]
         public void Open()
         {
             IsOpened = true;
