@@ -84,7 +84,7 @@ public class PlayerMove : MonoBehaviour
             canTalkToQuestGiver = true;
             
             print("Can talk with Jeff");
-            speed = 0f;
+            
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
