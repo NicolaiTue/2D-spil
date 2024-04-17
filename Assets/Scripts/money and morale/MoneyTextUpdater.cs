@@ -27,6 +27,6 @@ public class MoneyTextUpdater : MonoBehaviour
     private void UpdateMoneyText()
     {
         // Hent den aktuelle mængde penge fra GameManager og opdater teksten
-        moneyText.text = "Money: " + GameManager.instance.GetMoney().ToString();
+        moneyText.text = "" + GameManager.instance.GetMoney().ToString();
     }
 }
