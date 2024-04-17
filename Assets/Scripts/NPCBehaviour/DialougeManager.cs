@@ -81,7 +81,7 @@ public class DialougeManager : MonoBehaviour
 
             if (line.isQuestion)
             {
-                //yield return StartCoroutine(TypeText(line.text));
+                yield return StartCoroutine(typeText(line.text));
                 option1Button.interactable = true;
                 option2Button.interactable = true;
 
@@ -95,7 +95,7 @@ public class DialougeManager : MonoBehaviour
             }
             else
             {
-                //yield return StartCoroutine(TypeText(line.text));
+                yield return StartCoroutine(typeText(line.text));
 
             }
             line.startDialougeEvent?.Invoke();
@@ -136,6 +136,9 @@ public class DialougeManager : MonoBehaviour
         StopAllCoroutines();
         dialougeText.text = "";
         dialougeParent.SetActive(false);
+        PlayerMove.enabled = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 }
