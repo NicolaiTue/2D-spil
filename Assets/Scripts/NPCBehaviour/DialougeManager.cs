@@ -8,6 +8,7 @@ using UnityEngine.Experimental.AI;
 
 public class DialougeManager : MonoBehaviour
 {
+    [Header("Settings & Components")]
     [SerializeField] private GameObject dialougeParent;
     [SerializeField] private TextMeshProUGUI dialougeText;
     [SerializeField] private Button option1Button;
@@ -20,7 +21,7 @@ public class DialougeManager : MonoBehaviour
 
     [Header("Player")]
     public PlayerMove PlayerMove;
-    public Transform playerCamera;
+    //public Transform playerCamera;
 
     int currentDialougeIndex = 0;
 
@@ -57,17 +58,17 @@ public class DialougeManager : MonoBehaviour
     }
     private IEnumerator TurnCameraTowardsNPC(Transform NPC)
     {
-        Quaternion startRotation = playerCamera.rotation;
-        Quaternion targetRotation = Quaternion.LookRotation(NPC.position - playerCamera.position);
+        //Quaternion startRotation = playerCamera.rotation;
+        //Quaternion targetRotation = Quaternion.LookRotation(NPC.position - playerCamera.position);
 
         float elapseTime = 0f;
         while (elapseTime < 1f) 
         {
-            playerCamera.rotation = Quaternion.Slerp(startRotation, targetRotation, elapseTime);
+            //playerCamera.rotation = Quaternion.Slerp(startRotation, targetRotation, elapseTime);
             elapseTime += Time.deltaTime * turnSpeed;
             yield return null;
         }
-        playerCamera.rotation = targetRotation;
+        //playerCamera.rotation = targetRotation;
     }
 
     private bool optionSelected = false;
