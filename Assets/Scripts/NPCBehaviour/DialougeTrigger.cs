@@ -10,11 +10,16 @@ public class DialougeTrigger : MonoBehaviour
 
     bool hasSpoken = false;
 
+    [Header("NPC Selection")]
+    public NPCManager nPCManager;
+    public int NPCNumber;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         other.gameObject.GetComponent<DialougeManager>().DialougeStart(dialougeStrings, NpcTransform);
         hasSpoken=true;
+        nPCManager.NameHolder = nPCManager.Names[NPCNumber];
+        nPCManager.textureHolder = nPCManager.texures[NPCNumber];
     }
 }
 
