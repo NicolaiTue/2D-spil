@@ -8,8 +8,9 @@ using UnityEngine.Experimental.AI;
 
 public class DialougeManager : MonoBehaviour
 {
+    [Header("Settings & Components")]
     [SerializeField] private GameObject dialougeParent;
-    [SerializeField] private TMPro.TextMeshPro dialougeText;
+    [SerializeField] private TextMeshProUGUI dialougeText;
     [SerializeField] private Button option1Button;
     [SerializeField] private Button option2Button;
 
@@ -20,24 +21,25 @@ public class DialougeManager : MonoBehaviour
 
     [Header("Player")]
     public PlayerMove PlayerMove;
-    private Transform playerCamera;
+    //public Transform playerCamera;
 
     int currentDialougeIndex = 0;
 
     private void Start()
     {
         dialougeParent.SetActive(false);
-        playerCamera = Camera.main.transform;
+        //playerCamera = Camera.main.transform;
     }
 
     public void DialougeStart(List<dialougeString> textToPrint, Transform NPC)
     {
+        PlayerMove.speed = 0;
         dialougeParent.SetActive(true);
         PlayerMove.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        StartCoroutine(TurnCameraTowardsNPC(NPC));
+        //StartCoroutine(TurnCameraTowardsNPC(NPC));
 
         dialougeList = textToPrint;
         currentDialougeIndex = 0;
@@ -51,22 +53,22 @@ public class DialougeManager : MonoBehaviour
         option1Button.interactable = false;
         option2Button.interactable = false;
 
-        option1Button.GetComponentInChildren<TMPro.TextMeshPro>().text = "No Option";
-        option2Button.GetComponentInChildren<TMPro.TextMeshPro>().text = "No Option";
+        option1Button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = "No Option";
+        option2Button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = "No Option";
     }
     private IEnumerator TurnCameraTowardsNPC(Transform NPC)
     {
-        Quaternion startRotation = playerCamera.rotation;
-        Quaternion targetRotation = Quaternion.LookRotation(NPC.position - playerCamera.position);
+        //Quaternion startRotation = playerCamera.rotation;
+        //Quaternion targetRotation = Quaternion.LookRotation(NPC.position - playerCamera.position);
 
         float elapseTime = 0f;
         while (elapseTime < 1f) 
         {
-            playerCamera.rotation = Quaternion.Slerp(startRotation, targetRotation, elapseTime);
+            //playerCamera.rotation = Quaternion.Slerp(startRotation, targetRotation, elapseTime);
             elapseTime += Time.deltaTime * turnSpeed;
             yield return null;
         }
-        playerCamera.rotation = targetRotation;
+        //playerCamera.rotation = targetRotation;
     }
 
     private bool optionSelected = false;
@@ -85,8 +87,8 @@ public class DialougeManager : MonoBehaviour
                 option1Button.interactable = true;
                 option2Button.interactable = true;
 
-                option1Button.GetComponentInChildren<TMPro.TextMeshPro>().text = line.AnswerOption01;
-                option2Button.GetComponentInChildren<TMPro.TextMeshPro>().text = line.AnswerOption02;
+                option1Button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = line.AnswerOption01;
+                option2Button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = line.AnswerOption02;
 
                 option1Button.onClick.AddListener(() => HandleOptionSelected(line.option1IndexJump));
                 option2Button.onClick.AddListener(() => HandleOptionSelected(line.option2IndexJump));
@@ -136,9 +138,10 @@ public class DialougeManager : MonoBehaviour
         StopAllCoroutines();
         dialougeText.text = "";
         dialougeParent.SetActive(false);
-        PlayerMove.enabled = false;
+        PlayerMove.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        PlayerMove.speed = 8;
     }
 
 }
