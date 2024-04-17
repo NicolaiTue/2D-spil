@@ -34,6 +34,8 @@ public class PlayerMove : MonoBehaviour
     public float testDamage = 80;
     float currentHealth;
 
+    public int AddHealth = 25;
+
     //DamageToEnemy
     public int DamageToEnemy = 30;
 
@@ -95,6 +97,19 @@ public class PlayerMove : MonoBehaviour
             print("Can NOT talk with Jeff");
             
 
+        }
+
+        if (collision.gameObject.CompareTag("HPbost"))
+        {
+            // Add xx HP to currentHealth
+            currentHealth += AddHealth;
+            // Make sure currentHealth doesn't exceed MaxHealth
+            currentHealth = Mathf.Min(currentHealth, MaxHealth);
+            // Update the HealthBar
+            HealthBar.fillAmount = currentHealth / MaxHealth;
+
+            // Optionally, disable the health object after player collides with it
+            //collision.gameObject.SetActive(false);
         }
     }
 
@@ -179,7 +194,8 @@ public class PlayerMove : MonoBehaviour
             isInMenu = false;
         }
     }
-    
-    
+
+   
+
 
 }
