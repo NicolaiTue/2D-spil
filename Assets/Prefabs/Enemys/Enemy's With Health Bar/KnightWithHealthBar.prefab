@@ -597,7 +597,7 @@ MonoBehaviour:
   Attack: 
   Se: 
   tooSteepAngle: 12
-  attackdetectionRadius: 1.2
+  attackdetectionRadius: 1.5
   playerInRange: 0
   attackSpace: 0.9
   detectionRadius: 15
