@@ -67,6 +67,7 @@ public class PlayerMove : MonoBehaviour
             audioSource.playOnAwake = false;
             audioSource.clip = attackSound;
         }
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {
@@ -205,12 +206,14 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetButtonDown("Esc") && !isInMenu)
         {
+            Cursor.lockState = CursorLockMode.None;
             print("menu Opened");
             isInMenu = true;
         }
         else if (Input.GetButtonDown("Esc") && isInMenu)
         {
             isInMenu = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
     void checkIfDead()
@@ -219,6 +222,7 @@ public class PlayerMove : MonoBehaviour
         {
             Time.timeScale = 0f;
             deathScreen.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
 
         }
     }
