@@ -1360,6 +1360,23 @@ MonoBehaviour:
   typingSpeed: 0.05
   turnSpeed: 2
   PlayerMove: {fileID: 382370812}
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1318239267}
+        m_TargetAssemblyTypeName: SwitchSceneWithTraveller, Assembly-CSharp
+        m_MethodName: Travel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialougeTrigger: {fileID: 0}
+  IsTraveller: 0
 --- !u!4 &389775030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6930122694965717509, guid: 5abf20f0457997348bd80242fe916388, type: 3}
@@ -2624,11 +2641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3950338893905051575, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 159.1
+      value: 391.4
       objectReference: {fileID: 0}
     - target: {fileID: 3950338893905051575, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 3950338893905051575, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31632,7 +31649,7 @@ MonoBehaviour:
   NpcTransform: {fileID: 1318239264}
   nPCManager: {fileID: 1419353978}
   NPCNumber: 3
-  IsNpcTraveller: 0
+  IsNpcTraveller: 1
 --- !u!61 &1318239266
 BoxCollider2D:
   m_ObjectHideFlags: 0

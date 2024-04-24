@@ -15,6 +15,9 @@ public class DialougeTrigger : MonoBehaviour
     public int NPCNumber;
     public bool IsNpcTraveller = false;
 
+    [Header("Travel")]
+    public int WitchSceneIsTravel;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,6 +25,11 @@ public class DialougeTrigger : MonoBehaviour
         hasSpoken=true;
         nPCManager.NameHolder = nPCManager.Names[NPCNumber];
         nPCManager.textureHolder = nPCManager.texures[NPCNumber];
+        if (IsNpcTraveller)
+        {
+            other.gameObject.GetComponent<DialougeManager>().isTravellerManegerScript();
+            other.gameObject.GetComponent<DialougeManager>().SetTravellerSceneNumber(WitchSceneIsTravel);
+        }
     }
     
 }
