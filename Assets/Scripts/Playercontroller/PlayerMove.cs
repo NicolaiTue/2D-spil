@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour
     
 
     public float skade = 10f;
-
+    [Header("Health setting")]
     // HP bar
     [SerializeField] Image HealthBar;
     public float MaxHealth = 100;
@@ -35,22 +35,24 @@ public class PlayerMove : MonoBehaviour
     float currentHealth;
 
     public int AddHealth = 25;
-
+    [Header("Damage To Enemy")]
     //DamageToEnemy
     public int DamageToEnemy = 30;
-
+    [Header("Script Import")]
     // script import
     public PlayerVåben våben;
-
+    [Header("Sounds")]
     //lyd
     private AudioSource audioSource; // Lydkilden
     public AudioClip attackSound; // Lyden, der skal afspilles når man slår
-
+    [Header("DeathScreen")]
+    public GameObject deathScreen;
 
 
 
     private void Start()
     {
+        Time.timeScale = 1f;
         animator = GetComponent<Animator>();
 
         //set health
@@ -90,6 +92,7 @@ public class PlayerMove : MonoBehaviour
         CheckIfPlayerTakeDamage();
         isInAMenu();
         attack();
+        checkIfDead();
 
 
     }
@@ -210,7 +213,15 @@ public class PlayerMove : MonoBehaviour
             isInMenu = false;
         }
     }
+    void checkIfDead()
+    {
+        if (currentHealth <= 0)
+        {
+            Time.timeScale = 0f;
+            deathScreen.SetActive(true);
 
+        }
+    }
    
 
 
