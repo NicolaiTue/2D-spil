@@ -41,8 +41,13 @@ public class PlayerMove : MonoBehaviour
 
     // script import
     public PlayerVåben våben;
-    
-    
+
+    //lyd
+    private AudioSource audioSource; // Lydkilden
+    public AudioClip attackSound; // Lyden, der skal afspilles når man slår
+
+
+
 
     private void Start()
     {
@@ -50,6 +55,16 @@ public class PlayerMove : MonoBehaviour
 
         //set health
         currentHealth = MaxHealth;
+
+        // Hent lydkilden når man slår
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Hvis der ikke er en lydkilde, tilføj en og indstil den
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+            audioSource.clip = attackSound;
+        }
     }
     void Update()
     {
@@ -167,13 +182,14 @@ public class PlayerMove : MonoBehaviour
             print("you have attacked");
             animator.SetBool("Attack", true);
             
-
         }
     }
     void sendAttackInfo()
     {
+        AudioSource.PlayClipAtPoint(attackSound, transform.position);
         våben.Attack();
         print("våbnet er dødligt");
+        
 
     }
     void disableAttackAnimation()

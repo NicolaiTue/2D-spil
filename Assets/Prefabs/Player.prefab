@@ -172,9 +172,10 @@ MonoBehaviour:
   MaxHealth: 100
   takeDamage: 0
   testDamage: 80
+  AddHealth: 25
   DamageToEnemy: 15
   "v\xE5ben": {fileID: 6699127149063678770}
-  dialog: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 323e15cfe809e114ab92c9f4b25e8bc2, type: 3}
 --- !u!50 &3121373156171150745
 Rigidbody2D:
   serializedVersion: 4
