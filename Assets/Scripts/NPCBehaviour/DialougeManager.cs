@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 using UnityEngine.Experimental.AI;
+using System;
 
 public class DialougeManager : MonoBehaviour
 {
@@ -22,10 +23,16 @@ public class DialougeManager : MonoBehaviour
     [Header("Player")]
     public PlayerMove PlayerMove;
 
-    
+    [Header("UnityEvents")]
+    public UnityEvent events;
+    int WitchSceneIsTravel;
+
+    public DialougeTrigger dialougeTrigger;
     //public Transform playerCamera;
 
     int currentDialougeIndex = 0;
+
+    public bool IsTraveller = false;
 
     private void Start()
     {
@@ -102,7 +109,7 @@ public class DialougeManager : MonoBehaviour
                 yield return StartCoroutine(typeText(line.text));
 
             }
-            line.startDialougeEvent?.Invoke();
+            line.endDialougeEvent?.Invoke();
 
             optionSelected = false;
         }
@@ -144,6 +151,19 @@ public class DialougeManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         PlayerMove.speed = 8;
+        if (IsTraveller && currentDialougeIndex == WitchSceneIsTravel)
+        {
+            events.Invoke();
+        }
+        
+    }
+    public void isTravellerManegerScript()
+    {
+        IsTraveller = true;
+    }
+    public void SetTravellerSceneNumber(int number)
+    {
+        WitchSceneIsTravel = number;
     }
     private void Update()
     {
