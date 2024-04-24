@@ -85,6 +85,9 @@ MonoBehaviour:
   "D\xF8": 
   Liv: 100
   EHealthBar: {fileID: 3732137751168972937}
+  minMoneyOnDeath: 5
+  maxMoneyOnDeath: 15
+  pickupSound: {fileID: 8300000, guid: 80151380c0f818243b66a78ef69c9fcd, type: 3}
 --- !u!61 &6536600502247119516
 BoxCollider2D:
   m_ObjectHideFlags: 0

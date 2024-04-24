@@ -617,6 +617,9 @@ MonoBehaviour:
   "D\xF8": 
   Liv: 100
   EHealthBar: {fileID: 2898216916979269794}
+  minMoneyOnDeath: 5
+  maxMoneyOnDeath: 15
+  pickupSound: {fileID: 8300000, guid: 7053294e066eb1945baa4d9cc9194f15, type: 3}
 --- !u!50 &9143527816021592149
 Rigidbody2D:
   serializedVersion: 4

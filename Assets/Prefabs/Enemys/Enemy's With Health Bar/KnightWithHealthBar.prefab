@@ -608,6 +608,7 @@ MonoBehaviour:
   EHealthBar: {fileID: 149852633093439683}
   minMoneyOnDeath: 5
   maxMoneyOnDeath: 15
+  pickupSound: {fileID: 8300000, guid: 80151380c0f818243b66a78ef69c9fcd, type: 3}
 --- !u!61 &8977632966828123795
 BoxCollider2D:
   m_ObjectHideFlags: 0

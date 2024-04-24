@@ -43,12 +43,27 @@ public class AiEnemy : MonoBehaviour
 
     private float distance;
 
+    //lyd
+    public AudioClip pickupSound;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         ECollider = GetComponent<Collider2D>();
         currentLiv = Liv;
+
+        // Tjek om der allerede er en AudioSource knyttet til objektet
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Hvis ikke, tilføj en ny AudioSource
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+            // Sæt lydklippet for AudioSource
+            audioSource.clip = pickupSound;
+        }
     }
 
     // Update is called once per frame
@@ -136,6 +151,11 @@ public class AiEnemy : MonoBehaviour
     public void DisableAttack()
     {
         DMGAllow = false;
+    }
+
+    public void AttackSound()
+    {
+        AudioSource.PlayClipAtPoint(pickupSound, transform.position);
     }
 
     void UpdateAnimation()
