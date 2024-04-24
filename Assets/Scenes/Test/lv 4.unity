@@ -32090,6 +32090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2514022554777213878, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2886943335729531417, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
       propertyPath: AddHealth
       value: 25
@@ -32102,6 +32106,18 @@ PrefabInstance:
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 827717949}
+    - target: {fileID: 3121373156171150745, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121373156171150745, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3121373156171150745, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3305656493215600407, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
       propertyPath: orthographic size
       value: 8
@@ -33190,6 +33206,10 @@ PrefabInstance:
     - target: {fileID: 1960868794442196558, guid: f1df4b28c7c523b45a09d5f47042b173, type: 3}
       propertyPath: m_Name
       value: DeathScreenBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960868794442196558, guid: f1df4b28c7c523b45a09d5f47042b173, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5452140219095471655, guid: f1df4b28c7c523b45a09d5f47042b173, type: 3}
       propertyPath: m_Pivot.x

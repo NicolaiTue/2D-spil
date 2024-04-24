@@ -563,6 +563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathScreenBackground
       objectReference: {fileID: 0}
+    - target: {fileID: 1960868794442196558, guid: f1df4b28c7c523b45a09d5f47042b173, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5452140219095471655, guid: f1df4b28c7c523b45a09d5f47042b173, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -35275,6 +35279,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2719227801452879243, guid: 0a84f54077193d3489d0de133048df37, type: 3}
   m_PrefabInstance: {fileID: 1672974511}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2094706317
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3026367834618697877, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 382370809}
+    - target: {fileID: 3026367834618697877, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 382370812}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 167.29034
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1750001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299039051229352305, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987694971184296739, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
+      propertyPath: m_Name
+      value: MerchantWithHealthBar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 23a7e25f67af0dc42827466db78886e0, type: 3}
 --- !u!1001 &2107344836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35430,6 +35499,14 @@ PrefabInstance:
       propertyPath: events.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1318239267}
+    - target: {fileID: 5030973709976090228, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504341608191072347, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 5702254723339642843, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: HealthBar
       value: 
@@ -36036,3 +36113,4 @@ SceneRoots:
   - {fileID: 1295022955}
   - {fileID: 1438522525}
   - {fileID: 1528981230}
+  - {fileID: 2094706317}

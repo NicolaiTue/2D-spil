@@ -1096,6 +1096,14 @@ MonoBehaviour:
   "D\xF8": 
   Liv: 100
   EHealthBar: {fileID: 0}
+  minMoneyOnDeath: 5
+  maxMoneyOnDeath: 15
+  attackSound: {fileID: 0}
+  DeathSound0: {fileID: 0}
+  DeathSound1: {fileID: 0}
+  DeathSound2: {fileID: 0}
+  DeathSound3: {fileID: 0}
+  DeathSound4: {fileID: 0}
 --- !u!61 &8800895350269889418
 BoxCollider2D:
   m_ObjectHideFlags: 0

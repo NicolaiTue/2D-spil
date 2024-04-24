@@ -68,6 +68,7 @@ public class AiEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         anim = GetComponent<Animator>();
         ECollider = GetComponent<Collider2D>();
         currentLiv = Liv;
@@ -162,6 +163,8 @@ public class AiEnemy : MonoBehaviour
         //Tjekker om Enemy har liv tilbage
         if (currentLiv <= 0)
         {
+            int deadLayer = LayerMask.NameToLayer("Dead");
+            gameObject.layer = deadLayer;
             DieAnaimation();
 
         }

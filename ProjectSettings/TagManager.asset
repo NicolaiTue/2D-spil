@@ -8,6 +8,7 @@ TagManager:
   - PlayerWeapon
   - NPC
   - HPbost
+  - Dead
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Ground
   - Enemy
-  - 
+  - Dead
   - 
   - 
   - 
