@@ -22,7 +22,7 @@ public class DialougeManager : MonoBehaviour
     [Header("Player")]
     public PlayerMove PlayerMove;
 
-    
+    //public DialougeTrigger dialougeTrigger;
     //public Transform playerCamera;
 
     int currentDialougeIndex = 0;
@@ -144,6 +144,7 @@ public class DialougeManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         PlayerMove.speed = 8;
+        
     }
     private void Update()
     {

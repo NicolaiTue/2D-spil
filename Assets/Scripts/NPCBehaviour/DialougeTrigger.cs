@@ -13,6 +13,8 @@ public class DialougeTrigger : MonoBehaviour
     [Header("NPC Selection")]
     public NPCManager nPCManager;
     public int NPCNumber;
+    public bool IsNpcTraveller = false;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,11 +23,13 @@ public class DialougeTrigger : MonoBehaviour
         nPCManager.NameHolder = nPCManager.Names[NPCNumber];
         nPCManager.textureHolder = nPCManager.texures[NPCNumber];
     }
+    
 }
 
 [System.Serializable]
 public class dialougeString
 {
+    
     public string text; // viser hvad npc'en skal sige.
     public bool isEnded; // viser hvis sidste linje er kørt.
 
