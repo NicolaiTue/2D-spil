@@ -87,7 +87,12 @@ MonoBehaviour:
   EHealthBar: {fileID: 3732137751168972937}
   minMoneyOnDeath: 5
   maxMoneyOnDeath: 15
-  pickupSound: {fileID: 8300000, guid: 80151380c0f818243b66a78ef69c9fcd, type: 3}
+  attackSound: {fileID: 8300000, guid: 80151380c0f818243b66a78ef69c9fcd, type: 3}
+  DeathSound0: {fileID: 8300000, guid: d30c820ff550c794a86e903ad647e4ee, type: 3}
+  DeathSound1: {fileID: 8300000, guid: 73a158e99ad07154280d61719abe8d6c, type: 3}
+  DeathSound2: {fileID: 8300000, guid: 750dad2c35d71a44fb6d408b4d245bf8, type: 3}
+  DeathSound3: {fileID: 8300000, guid: ab311aab76ae384488143d38eaef60fb, type: 3}
+  DeathSound4: {fileID: 8300000, guid: b0ffcf6cc5c93b942a7482cd6470415a, type: 3}
 --- !u!61 &6536600502247119516
 BoxCollider2D:
   m_ObjectHideFlags: 0

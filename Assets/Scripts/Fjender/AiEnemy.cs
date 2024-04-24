@@ -44,8 +44,26 @@ public class AiEnemy : MonoBehaviour
     private float distance;
 
     //lyd
-    public AudioClip pickupSound;
+    public AudioClip attackSound;
     private AudioSource audioSource;
+
+    bool isDeathSoundPlaying = false;
+    //død lyde
+    public AudioClip DeathSound0;
+    private AudioSource audioSource0;
+
+    public AudioClip DeathSound1;
+    private AudioSource audioSource1;
+
+    public AudioClip DeathSound2;
+    private AudioSource audioSource2;
+
+    public AudioClip DeathSound3;
+    private AudioSource audioSource3;
+
+    public AudioClip DeathSound4;
+    private AudioSource audioSource4;
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +80,57 @@ public class AiEnemy : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
             audioSource.playOnAwake = false;
             // Sæt lydklippet for AudioSource
-            audioSource.clip = pickupSound;
+            audioSource.clip = attackSound;
+        }
+
+        audioSource0 = GetComponent<AudioSource>();
+        if (audioSource0 == null)
+        {
+            // Hvis ikke, tilføj en ny AudioSource
+            audioSource0 = gameObject.AddComponent<AudioSource>();
+            audioSource0.playOnAwake = false;
+            // Sæt lydklippet for AudioSource
+            audioSource0.clip = DeathSound0;
+        }
+
+        audioSource1 = GetComponent<AudioSource>();
+        if (audioSource1 == null)
+        {
+            // Hvis ikke, tilføj en ny AudioSource
+            audioSource1 = gameObject.AddComponent<AudioSource>();
+            audioSource1.playOnAwake = false;
+            // Sæt lydklippet for AudioSource
+            audioSource1.clip = DeathSound1;
+        }
+
+        audioSource2 = GetComponent<AudioSource>();
+        if (audioSource2 == null)
+        {
+            // Hvis ikke, tilføj en ny AudioSource
+            audioSource2 = gameObject.AddComponent<AudioSource>();
+            audioSource2.playOnAwake = false;
+            // Sæt lydklippet for AudioSource
+            audioSource2.clip = DeathSound2;
+        }
+
+        audioSource3 = GetComponent<AudioSource>();
+        if (audioSource3 == null)
+        {
+            // Hvis ikke, tilføj en ny AudioSource
+            audioSource3 = gameObject.AddComponent<AudioSource>();
+            audioSource3.playOnAwake = false;
+            // Sæt lydklippet for AudioSource
+            audioSource3.clip = DeathSound3;
+        }
+
+        audioSource4 = GetComponent<AudioSource>();
+        if (audioSource4 == null)
+        {
+            // Hvis ikke, tilføj en ny AudioSource
+            audioSource4 = gameObject.AddComponent<AudioSource>();
+            audioSource4.playOnAwake = false;
+            // Sæt lydklippet for AudioSource
+            audioSource4.clip = DeathSound4;
         }
     }
 
@@ -155,7 +223,7 @@ public class AiEnemy : MonoBehaviour
 
     public void AttackSound()
     {
-        AudioSource.PlayClipAtPoint(pickupSound, transform.position);
+        AudioSource.PlayClipAtPoint(attackSound, transform.position);
     }
 
     void UpdateAnimation()
@@ -185,7 +253,26 @@ public class AiEnemy : MonoBehaviour
 
     void DieAnaimation()
     {
+        // Hvis lyden allerede afspilles, så afslut funktionen
+        if (isDeathSoundPlaying)
+        {
+            return;
+        }
+
+        // Opret en liste af dødlyde
+        AudioClip[] deathSounds = { DeathSound0, DeathSound1, DeathSound2, DeathSound3, DeathSound4 };
+
+        // Vælg en tilfældig lyd fra listen
+        int randomIndex = Random.Range(0, deathSounds.Length);
+        AudioClip randomDeathSound = deathSounds[randomIndex];
+
         anim.SetTrigger("Dø");
+
+        // Afspil den tilfældigt valgte lyd
+        AudioSource.PlayClipAtPoint(randomDeathSound, transform.position);
+
+        // Marker at lyden er begyndt at afspille
+        isDeathSoundPlaying = true;
     }
     void AfterDeathAnimation()
     {
