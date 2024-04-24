@@ -69,6 +69,7 @@ public class AiEnemy : MonoBehaviour
     void Start()
     {
         
+
         anim = GetComponent<Animator>();
         ECollider = GetComponent<Collider2D>();
         currentLiv = Liv;
@@ -163,10 +164,7 @@ public class AiEnemy : MonoBehaviour
         //Tjekker om Enemy har liv tilbage
         if (currentLiv <= 0)
         {
-            int deadLayer = LayerMask.NameToLayer("Dead");
-            gameObject.layer = deadLayer;
             DieAnaimation();
-
         }
     }
 
@@ -256,6 +254,24 @@ public class AiEnemy : MonoBehaviour
 
     void DieAnaimation()
     {
+        string deadLayerName = "Dead";
+
+        // Ændrer laget for parent objektet
+        gameObject.layer = LayerMask.NameToLayer(deadLayerName);
+
+        // Gennemgår alle child objekter og ændrer deres lag
+        foreach (Transform child in transform)
+        {
+            // Ændrer laget for barnet
+            child.gameObject.layer = LayerMask.NameToLayer(deadLayerName);
+
+            // Hvis barnet har child objekter, gennemgå dem rekursivt
+            if (child.childCount > 0)
+            {
+                ChangeLayer(child, deadLayerName);
+            }
+        }
+               
         // Hvis lyden allerede afspilles, så afslut funktionen
         if (isDeathSoundPlaying)
         {
@@ -277,6 +293,23 @@ public class AiEnemy : MonoBehaviour
         // Marker at lyden er begyndt at afspille
         isDeathSoundPlaying = true;
     }
+
+    private void ChangeLayer(Transform parentTransform, string layerName)
+    {
+        // Gennemgår alle børneobjekter og ændrer deres lag
+        foreach (Transform child in parentTransform)
+        {
+            // Ændrer laget for child
+            child.gameObject.layer = LayerMask.NameToLayer(layerName);
+
+            // Hvis barnet har child objekter, gennemgå dem rekursivt
+            if (child.childCount > 0)
+            {
+                ChangeLayer(child, layerName);
+            }
+        }
+    }
+
     void AfterDeathAnimation()
     {
         
@@ -299,7 +332,7 @@ public class AiEnemy : MonoBehaviour
     }
     void DestroyObject()
     {
-
+               
         // Generer et tilfældigt antal penge mellem minMoneyOnDeath og maxMoneyOnDeath
         int moneyToGive = Random.Range(minMoneyOnDeath, maxMoneyOnDeath + 1); // maxMoneyOnDeath er eksklusivt, derfor +1
 
