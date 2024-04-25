@@ -68,8 +68,8 @@ namespace Cainos.PixelArtPlatformer_VillageProps
             for (int i = 0; i < numberOfCoinsToSpawn; i++)
             {
                 // Radisu de skal spawne inden for
-                float xOffset = Random.Range(-1f, 1f); 
-                float yOffset = Random.Range(0f, 1f); 
+                float xOffset = Random.Range(-0.5f, 0.5f); 
+                float yOffset = Random.Range(0f, 3f); 
 
                 // Spawn coin prefabs i forhold til numberOfCoinsToSpawn
                 Instantiate(coinPrefab, transform.position + new Vector3(xOffset, yOffset, 0), Quaternion.identity);
