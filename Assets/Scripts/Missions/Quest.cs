@@ -12,21 +12,22 @@ public class Quest : MonoBehaviour
     public UnityEvent NegativEvent;
 
 
-    public void StartMission01()
+    private void Start()
     {
-        DoIHaveAQuest =true;
+        
+    }
+    public void PossitivAnswer()
+    {
+        print("Possitiv");
+        Destroy(Præst);
+        PossitivEvent.Invoke();
     }
     public void NegativeAnswer()
     {
-        print("Possitiv");
-        Præst.enabled = false;
+        print("Negativ");
+        Destroy(Præst);
         NegativEvent.Invoke();   
     }
 
-    public void PossitivAnswer()
-    {
-        print("Negativ");
-        Præst.enabled = false;
-        PossitivEvent.Invoke();
-    }
+    
 }

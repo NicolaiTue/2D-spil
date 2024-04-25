@@ -20,7 +20,11 @@ public class DialougeTrigger : MonoBehaviour
 
     [Header("Mission Selection & Settings")]
     public bool IsThisAMissionGiver = false;
-    public bool IsAnswerPositiv = false;
+    public int NegativAnswer;
+    public int PositivAnswer;
+    public bool IsDelivery;
+    public int DPAnswer;
+    public int DNAnswer;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,8 +40,11 @@ public class DialougeTrigger : MonoBehaviour
         }
         if (IsThisAMissionGiver)
         {
-            other.gameObject.GetComponent<DialougeManager>().isMissionGiverManagerScript();
-            other.gameObject.GetComponent<DialougeManager>().setMissionGiverAnswerIndex(IsAnswerPositiv);
+            other.gameObject.GetComponent<DialougeManager>().MissionAnswerReciver(PositivAnswer, NegativAnswer, IsThisAMissionGiver);
+        }
+        if (IsDelivery)
+        {
+            other.gameObject.GetComponent<DialougeManager>().DeliveryMissionReciver(DPAnswer, DNAnswer, IsDelivery);
         }
     }
     

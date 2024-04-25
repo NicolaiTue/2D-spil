@@ -2419,6 +2419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 667235414}
   - component: {fileID: 667235413}
+  - component: {fileID: 667235415}
   m_Layer: 0
   m_Name: QuestManager
   m_TagString: Untagged
@@ -2510,8 +2511,55 @@ Transform:
   m_Children:
   - {fileID: 737331447}
   - {fileID: 589580954}
+  - {fileID: 2116499691}
+  - {fileID: 1490712771}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &667235415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667235412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76eda4b55951d354fb1ee99664f61468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionIsStarted: 0
+  Barn: {fileID: 1962571224}
+  Barn2: {fileID: 1962571227}
+  Deliver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1490712770}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Refuse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2116499690}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &695438428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31528,11 +31576,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: AcceptDelivery.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsN.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsP.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: RefuseDelivery.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
@@ -31560,6 +31616,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: AcceptDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsN.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -31568,9 +31628,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: RefuseDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 667235413}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: AcceptDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 667235415}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsN.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -31580,7 +31648,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 667235413}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: RefuseDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 667235415}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEvents.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: AcceptDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
@@ -31596,12 +31672,24 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: RefuseDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: AcceptDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Delivery
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsN.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NegativeAnswer
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsP.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PossitivAnswer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: RefuseDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RefuseMission
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: events.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -31612,12 +31700,20 @@ PrefabInstance:
       value: Quest, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: AcceptDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Quest2Start, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsN.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Quest, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsP.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Quest, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: RefuseDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Quest2Start, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: events.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -31628,11 +31724,19 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: AcceptDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsN.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEventsP.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: RefuseDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4679986738863110692, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
@@ -32478,6 +32582,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4815235850804891603, guid: e3ef72d9f2a941b479a3bda87147db32, type: 3}
   m_PrefabInstance: {fileID: 511124545}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1490712770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1490712771}
+  m_Layer: 0
+  m_Name: Possitiv Delivery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1490712771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490712770}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667235414}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1496198777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5260572382779035084, guid: c5f8f079905bce04f945cd8ff4ba545a, type: 3}
@@ -34104,7 +34239,11 @@ MonoBehaviour:
   IsNpcTraveller: 0
   WitchSceneIsTravel: 0
   IsThisAMissionGiver: 1
-  IsAnswerPositiv: 0
+  NegativAnswer: 6
+  PositivAnswer: 5
+  IsDelivery: 0
+  DPAnswer: 0
+  DNAnswer: 0
 --- !u!61 &1765104750
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35069,6 +35208,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2377838456521466393, guid: 0b6eea0d82b28544da910ccce87bec9e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1962571225}
+    - targetCorrespondingSourceObject: {fileID: 2377838456521466393, guid: 0b6eea0d82b28544da910ccce87bec9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1962571227}
   m_SourcePrefab: {fileID: 100100000, guid: 0b6eea0d82b28544da910ccce87bec9e, type: 3}
 --- !u!4 &1962571222 stripped
 Transform:
@@ -35160,7 +35302,11 @@ MonoBehaviour:
   IsNpcTraveller: 0
   WitchSceneIsTravel: 0
   IsThisAMissionGiver: 0
-  IsAnswerPositiv: 0
+  NegativAnswer: 4
+  PositivAnswer: 3
+  IsDelivery: 1
+  DPAnswer: 3
+  DNAnswer: 4
 --- !u!61 &1962571225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35206,6 +35352,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &1962571227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554961111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb16294bb72a04b8bff455a5257de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialougeStrings: []
+  NpcTransform: {fileID: 0}
+  nPCManager: {fileID: 0}
+  NPCNumber: 0
+  IsNpcTraveller: 0
+  WitchSceneIsTravel: 0
+  IsThisAMissionGiver: 0
+  NegativAnswer: 0
+  PositivAnswer: 0
+  IsDelivery: 0
+  DPAnswer: 0
+  DNAnswer: 0
 --- !u!1001 &1967392498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35650,6 +35820,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2719227801452879243, guid: 0a84f54077193d3489d0de133048df37, type: 3}
   m_PrefabInstance: {fileID: 638034117}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2116499690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2116499691}
+  m_Layer: 0
+  m_Name: Negativ Delivery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2116499691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116499690}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667235414}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2118452295
 PrefabInstance:
   m_ObjectHideFlags: 0

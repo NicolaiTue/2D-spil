@@ -28,15 +28,22 @@ public class DialougeManager : MonoBehaviour
     int WitchSceneIsTravel;
     public UnityEvent MissionEventsP;
     public UnityEvent MissionEventsN;
-    bool MissionGiverAnswer;
+    public int PAnswer;
+    public int NAnswer;
+
+    public int DPAnswer;
+    public int DNAnswer;
+    public UnityEvent AcceptDelivery;
+    public UnityEvent RefuseDelivery;
 
     public DialougeTrigger dialougeTrigger;
     //public Transform playerCamera;
 
-    int currentDialougeIndex = 0;
+    public int currentDialougeIndex = 0;
 
     public bool IsTraveller = false;
     public bool IsMissionGiver = false;
+    public bool IsDelivery =false;
 
     private void Start()
     {
@@ -160,23 +167,37 @@ public class DialougeManager : MonoBehaviour
         {
             events.Invoke();
         }
-        if (IsMissionGiver && MissionGiverAnswer)
+        
+        if (IsMissionGiver && currentDialougeIndex == PAnswer)
         {
             MissionEventsP.Invoke();
         }
-        if (IsMissionGiver && !MissionGiverAnswer)
+        if (IsMissionGiver && currentDialougeIndex == NAnswer)
         {
             MissionEventsN.Invoke();
         }
+        //deliveryMissions
+        if (IsDelivery && currentDialougeIndex == DPAnswer)
+        {
+            AcceptDelivery.Invoke();
+        }
+        if (IsDelivery && currentDialougeIndex == DNAnswer)
+        {
+            RefuseDelivery.Invoke();
+        }
         
     }
-    public void isMissionGiverManagerScript()
+    public void DeliveryMissionReciver(int P, int N, bool IsDeliveryMission)
     {
-        IsMissionGiver = true;
+        DPAnswer = P;
+        DNAnswer = N;
+        IsDelivery = IsDeliveryMission;
     }
-    public void setMissionGiverAnswerIndex(bool answer)
+    public void MissionAnswerReciver(int Positiv, int Negativ, bool IsMission)
     {
-        MissionGiverAnswer = answer;
+        PAnswer = Positiv;
+        NAnswer = Negativ;
+        IsMissionGiver = IsMission;
     }
     public void isTravellerManegerScript()
     {
