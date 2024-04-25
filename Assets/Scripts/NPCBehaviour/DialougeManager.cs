@@ -26,6 +26,9 @@ public class DialougeManager : MonoBehaviour
     [Header("UnityEvents")]
     public UnityEvent events;
     int WitchSceneIsTravel;
+    public UnityEvent MissionEventsP;
+    public UnityEvent MissionEventsN;
+    bool MissionGiverAnswer;
 
     public DialougeTrigger dialougeTrigger;
     //public Transform playerCamera;
@@ -33,6 +36,7 @@ public class DialougeManager : MonoBehaviour
     int currentDialougeIndex = 0;
 
     public bool IsTraveller = false;
+    public bool IsMissionGiver = false;
 
     private void Start()
     {
@@ -151,11 +155,28 @@ public class DialougeManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         PlayerMove.speed = 8;
+        
         if (IsTraveller && currentDialougeIndex == WitchSceneIsTravel)
         {
             events.Invoke();
         }
+        if (IsMissionGiver && MissionGiverAnswer)
+        {
+            MissionEventsP.Invoke();
+        }
+        if (IsMissionGiver && !MissionGiverAnswer)
+        {
+            MissionEventsN.Invoke();
+        }
         
+    }
+    public void isMissionGiverManagerScript()
+    {
+        IsMissionGiver = true;
+    }
+    public void setMissionGiverAnswerIndex(bool answer)
+    {
+        MissionGiverAnswer = answer;
     }
     public void isTravellerManegerScript()
     {
