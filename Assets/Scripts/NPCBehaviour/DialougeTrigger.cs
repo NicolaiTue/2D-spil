@@ -18,6 +18,10 @@ public class DialougeTrigger : MonoBehaviour
     [Header("Travel")]
     public int WitchSceneIsTravel;
 
+    [Header("Mission Selection & Settings")]
+    public bool IsThisAMissionGiver = false;
+    public bool IsAnswerPositiv = false;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,6 +33,11 @@ public class DialougeTrigger : MonoBehaviour
         {
             other.gameObject.GetComponent<DialougeManager>().isTravellerManegerScript();
             other.gameObject.GetComponent<DialougeManager>().SetTravellerSceneNumber(WitchSceneIsTravel);
+        }
+        if (IsThisAMissionGiver)
+        {
+            other.gameObject.GetComponent<DialougeManager>().isMissionGiverManagerScript();
+            other.gameObject.GetComponent<DialougeManager>().setMissionGiverAnswerIndex(IsAnswerPositiv);
         }
     }
     

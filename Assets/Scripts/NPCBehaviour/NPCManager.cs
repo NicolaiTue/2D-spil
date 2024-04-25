@@ -17,6 +17,12 @@ public class NPCManager : MonoBehaviour
     [Header("NPC Pics")]
     public Texture2D[] texures = new Texture2D[] { };
     public Texture2D textureHolder;
+
+
+    [Header("Mission Settings")]
+    public int MissionSeleceted;
+
+
     private void Start()
     {
         
