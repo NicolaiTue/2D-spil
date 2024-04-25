@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6452278282418701251}
   - component: {fileID: 1096735996136120663}
   m_Layer: 0
-  m_Name: Baggrundslys
+  m_Name: Baggrundslyd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
