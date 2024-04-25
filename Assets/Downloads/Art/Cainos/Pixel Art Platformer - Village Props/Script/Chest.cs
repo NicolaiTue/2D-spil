@@ -11,7 +11,7 @@ namespace Cainos.PixelArtPlatformer_VillageProps
         public Animator animator;
 
         [FoldoutGroup("Reference")]
-        public GameObject coinPrefab; // Referencen til prefab-objektet af mønten
+        public GameObject coinPrefab; // Reference til prefab-objektet af mønten
 
         [FoldoutGroup("Runtime")]
         public bool IsOpened
@@ -29,11 +29,11 @@ namespace Cainos.PixelArtPlatformer_VillageProps
         }
         private bool isOpened;
 
-        // Radius for detecting player proximity
+        // Radius for detecting player afstand
         [FoldoutGroup("Runtime")]
         public float interactRadius = 2f;
 
-        // Reference to the player GameObject
+        // Reference til player GameObject
         private GameObject player;
 
         // Antallet af mønter, der skal spawnes
@@ -42,36 +42,36 @@ namespace Cainos.PixelArtPlatformer_VillageProps
 
         private void Start()
         {
-            // Find the player GameObject by tag
+            // Find  player GameObject via tag
             player = GameObject.FindGameObjectWithTag("Player");
         }
 
         private void Update()
         {
-            // Check if the player is close and presses the interact key
+            // Check om player er tæt og om der trykkes e
             if (Vector2.Distance(transform.position, player.transform.position) <= interactRadius && Input.GetKeyDown(KeyCode.E))
             {
                 Interact();
             }
         }
 
-        // Function to handle the interaction with the chest
+        
         private void Interact()
         {
             // Toggle the state of the chest
             IsOpened = !IsOpened;
         }
 
-        // Function to spawn coins when the chest is opened
+        // Function til spawnw coins når den åbnet
         private void SpawnCoins()
         {
             for (int i = 0; i < numberOfCoinsToSpawn; i++)
             {
-                // Generate random offsets for x and y positions
-                float xOffset = Random.Range(-0.5f, 0.5f); // Adjust the range as needed
-                float yOffset = Random.Range(-0.5f, 0.5f); // Adjust the range as needed
+                // Radisu de skal spawne inden for
+                float xOffset = Random.Range(-1f, 1f); 
+                float yOffset = Random.Range(0f, 1f); 
 
-                // Spawn coin prefabs based on numberOfCoinsToSpawn
+                // Spawn coin prefabs i forhold til numberOfCoinsToSpawn
                 Instantiate(coinPrefab, transform.position + new Vector3(xOffset, yOffset, 0), Quaternion.identity);
             }
         }
