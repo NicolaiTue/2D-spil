@@ -25,6 +25,7 @@ public class DialougeTrigger : MonoBehaviour
     public bool IsDelivery;
     public int DPAnswer;
     public int DNAnswer;
+    public bool Delivery2;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,6 +46,10 @@ public class DialougeTrigger : MonoBehaviour
         if (IsDelivery)
         {
             other.gameObject.GetComponent<DialougeManager>().DeliveryMissionReciver(DPAnswer, DNAnswer, IsDelivery);
+        }
+        if (Delivery2)
+        {
+            other.gameObject.GetComponent<DialougeManager>().Delivery2Reciver(Delivery2);
         }
     }
     
