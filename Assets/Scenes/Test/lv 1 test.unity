@@ -34103,7 +34103,7 @@ MonoBehaviour:
   NPCNumber: 0
   IsNpcTraveller: 0
   WitchSceneIsTravel: 0
-  IsThisAMissionGiver: 0
+  IsThisAMissionGiver: 1
   IsAnswerPositiv: 0
 --- !u!61 &1765104750
 BoxCollider2D:
