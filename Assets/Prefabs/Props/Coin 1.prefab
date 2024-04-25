@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93934135ff5b6304398061a26aef2bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyAmount: 30
+  moneyAmount: 5
   pickupSound: {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
 --- !u!68 &4743907962488488967
 EdgeCollider2D:
