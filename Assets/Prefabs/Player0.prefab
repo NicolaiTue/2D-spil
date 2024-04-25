@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 948934432822756988, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
       propertyPath: m_Name
-      value: Player Variant
+      value: Player0
       objectReference: {fileID: 0}
     - target: {fileID: 3305656493215600407, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
       propertyPath: orthographic size
@@ -63,6 +63,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 948934432822756988, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2893489945537098461}
+    - targetCorrespondingSourceObject: {fileID: 948934432822756988, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4679986738863110692}
   m_SourcePrefab: {fileID: 100100000, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
 --- !u!114 &5702254723339642843 stripped
 MonoBehaviour:
@@ -116,3 +119,18 @@ MonoBehaviour:
         m_CallState: 2
   dialougeTrigger: {fileID: 0}
   IsTraveller: 0
+--- !u!114 &4679986738863110692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645224341380885438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b07521dff6aa0449678d6e949aa8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isQuestDone: 0
+  isQuestFailed: 0
+  QuestScripts: []
