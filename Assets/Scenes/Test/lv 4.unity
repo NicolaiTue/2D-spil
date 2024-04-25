@@ -891,11 +891,11 @@ PrefabInstance:
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: attackdetectionRadius
       value: 1.5
@@ -31806,11 +31806,11 @@ PrefabInstance:
     - target: {fileID: 1065656979176850948, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 1065656979176850948, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     - target: {fileID: 1797058576740432164, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: m_LocalPosition.x
       value: 90.48079
@@ -32427,11 +32427,11 @@ PrefabInstance:
     - target: {fileID: 4134854200679037721, guid: bb384cc9964b8a9499b0caa46b75a5bf, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 4134854200679037721, guid: bb384cc9964b8a9499b0caa46b75a5bf, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32621,11 +32621,11 @@ PrefabInstance:
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32723,11 +32723,11 @@ PrefabInstance:
     - target: {fileID: 1065656979176850948, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 1065656979176850948, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     - target: {fileID: 1797058576740432164, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: m_LocalPosition.x
       value: 109.84839
@@ -33973,11 +33973,11 @@ PrefabInstance:
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: attackdetectionRadius
       value: 1.5
@@ -34389,11 +34389,11 @@ PrefabInstance:
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34952,11 +34952,11 @@ PrefabInstance:
     - target: {fileID: 4134854200679037721, guid: bb384cc9964b8a9499b0caa46b75a5bf, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 4134854200679037721, guid: bb384cc9964b8a9499b0caa46b75a5bf, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35045,11 +35045,11 @@ PrefabInstance:
     - target: {fileID: 1065656979176850948, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 1065656979176850948, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     - target: {fileID: 1797058576740432164, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: m_LocalPosition.x
       value: 111.35538
@@ -35856,11 +35856,11 @@ PrefabInstance:
     - target: {fileID: 1065656979176850948, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 1065656979176850948, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     - target: {fileID: 1797058576740432164, guid: 56675b408a241e649a154547b2c0d262, type: 3}
       propertyPath: m_LocalPosition.x
       value: 123.01886
@@ -36203,11 +36203,11 @@ PrefabInstance:
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: attackdetectionRadius
       value: 1.8
@@ -36329,11 +36329,11 @@ PrefabInstance:
     - target: {fileID: 4134854200679037721, guid: bb384cc9964b8a9499b0caa46b75a5bf, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 4134854200679037721, guid: bb384cc9964b8a9499b0caa46b75a5bf, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37167,11 +37167,11 @@ PrefabInstance:
     - target: {fileID: 4134854200679037721, guid: bb384cc9964b8a9499b0caa46b75a5bf, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 4134854200679037721, guid: bb384cc9964b8a9499b0caa46b75a5bf, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37951,11 +37951,11 @@ PrefabInstance:
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: attackdetectionRadius
       value: 1.8
@@ -38046,6 +38046,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+--- !u!1 &1856316160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7645224341380885438, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+  m_PrefabInstance: {fileID: 1856316159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1856316161 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5702254723339642843, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+  m_PrefabInstance: {fileID: 1856316159}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856316160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 366b71e8ffdd72f4bac12eb33303e266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1872604558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8183758440019976683, guid: c759bb922e42eda4eb6f7e6e4e2fbe63, type: 3}
@@ -38202,11 +38218,11 @@ PrefabInstance:
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: attackdetectionRadius
       value: 2
@@ -39320,11 +39336,11 @@ PrefabInstance:
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316160}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: playerScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1856316161}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
