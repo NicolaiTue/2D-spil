@@ -7,7 +7,8 @@ public class Quest2Start : MonoBehaviour
 {
     public bool missionIsStarted = false;
     public DialougeTrigger Barn;
-    public DialougeTrigger Barn2;
+    public GameObject BarnObject;
+    public GameObject Barn2object;
     public UnityEvent Deliver;
     public UnityEvent Refuse;
 
@@ -22,7 +23,7 @@ public class Quest2Start : MonoBehaviour
     {
         print("Acceptet Mision");
         Destroy(Barn);
-        Barn2.enabled = true;
-        Deliver.Invoke();
+        Destroy(BarnObject);
+        Barn2object.SetActive(true);
     }
 }
