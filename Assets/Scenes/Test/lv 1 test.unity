@@ -2350,6 +2350,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5f8f079905bce04f945cd8ff4ba545a, type: 3}
+--- !u!1 &667235412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667235414}
+  - component: {fileID: 667235413}
+  - component: {fileID: 667235415}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &667235413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667235412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ce9d8e15a84684ab20608ff1ff33f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsMissionDone: 0
+  DoIHaveAQuest: 0
+  "Pr\xE6st": {fileID: 0}
+--- !u!4 &667235414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667235412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 153.77568, y: 2.3595452, z: -18.196682}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &667235415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667235412}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50efa19e4d269414b9025ad806e0a3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Moneyamount: -10
 --- !u!1001 &695438428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31302,6 +31363,14 @@ PrefabInstance:
       propertyPath: events.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1318239267}
+    - target: {fileID: 4679986738863110692, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: nameOfMission
+      value: Mission01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679986738863110692, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: QuestScripts.Array.data[0]
+      value: 
+      objectReference: {fileID: 667235412}
     - target: {fileID: 5702254723339642843, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: HealthBar
       value: 
@@ -35919,3 +35988,4 @@ SceneRoots:
   - {fileID: 1438522525}
   - {fileID: 1528981230}
   - {fileID: 1320899008}
+  - {fileID: 667235414}

@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
     // Method to reset money and morale
     public void ResetData()
     {
-        money = 0;
+        money = 50;
         morale = 50; // Reset morale to default value
         SaveData();
     }
