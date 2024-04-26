@@ -13,20 +13,30 @@ public class GameManager : MonoBehaviour
     // Keys for PlayerPrefs
     private const string moneyKey = "Money";
     private const string moraleKey = "Morale";
+    private const string maxHealthKey = "MaxHealth";
+    private const string damageToEnemyKey = "DamageToEnemy";
+    private const string addHealthKey = "AddHealth";
 
+
+    // Player stats
+    private float playerMaxHealth;
+    private int playerDamageToEnemy;
+    private int playerAddHealth;
 
     // Definition af en statisk begivenhed for at signalere, når pengemængden ændres
     public delegate void MoneyChanged();
     public static event MoneyChanged OnMoneyChanged;
 
+    
 
 
-    private void Awake()
-    {
+
+    void Awake()
+    {        
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Beholder GameManager objekt nåt man loader en ny scene 
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -77,6 +87,9 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt(moneyKey, money);
         PlayerPrefs.SetInt(moraleKey, morale);
+        PlayerPrefs.SetFloat(maxHealthKey, playerMaxHealth);
+        PlayerPrefs.SetInt(damageToEnemyKey, playerDamageToEnemy);
+        PlayerPrefs.SetInt(addHealthKey, playerAddHealth);
         PlayerPrefs.Save();
     }
 
@@ -85,6 +98,9 @@ public class GameManager : MonoBehaviour
     {
         money = PlayerPrefs.GetInt(moneyKey, 0);
         morale = PlayerPrefs.GetInt(moraleKey, 50); // Default morale value of 50
+        playerMaxHealth = PlayerPrefs.GetFloat(maxHealthKey, 100); // Default max health value of 100
+        playerDamageToEnemy = PlayerPrefs.GetInt(damageToEnemyKey, 30); // Default damage to enemy value of 30
+        playerAddHealth = PlayerPrefs.GetInt(addHealthKey, 25); // Default add health value of 25
 
     }
 
@@ -105,5 +121,30 @@ public class GameManager : MonoBehaviour
     public int GetMorale()
     {
         return morale;
+    }
+
+    // Methods to update player stats
+    public void UpdatePlayerStats(float maxHealth, int damageToEnemy, int addHealth)
+    {
+        playerMaxHealth = maxHealth;
+        playerDamageToEnemy = damageToEnemy;
+        playerAddHealth = addHealth;
+        SaveData();
+    }
+
+    // Methods to get player stats
+    public float GetPlayerMaxHealth()
+    {
+        return playerMaxHealth;
+    }
+
+    public int GetPlayerDamageToEnemy()
+    {
+        return playerDamageToEnemy;
+    }
+
+    public int GetPlayerAddHealth()
+    {
+        return playerAddHealth;
     }
 }

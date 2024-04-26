@@ -48,10 +48,13 @@ public class PlayerMove : MonoBehaviour
     [Header("DeathScreen")]
     public GameObject deathScreen;
 
+    private GameManager gameManager;
 
 
     private void Start()
     {
+        gameManager = GameManager.instance;
+
         Time.timeScale = 1f;
         animator = GetComponent<Animator>();
 
@@ -68,6 +71,16 @@ public class PlayerMove : MonoBehaviour
             audioSource.clip = attackSound;
         }
         Cursor.lockState = CursorLockMode.Locked;
+
+        float maxHealth = gameManager.GetPlayerMaxHealth();
+        int damageToEnemy = gameManager.GetPlayerDamageToEnemy();
+        int addHealth = gameManager.GetPlayerAddHealth();
+
+        MaxHealth = maxHealth;
+        DamageToEnemy = damageToEnemy;
+        AddHealth = addHealth;
+
+
     }
     void Update()
     {
@@ -157,9 +170,12 @@ public class PlayerMove : MonoBehaviour
 
     public void TakeDamageFromEnemy(float damage)
     {
+        
         currentHealth -= damage;
         print(currentHealth);
         HealthBar.fillAmount = currentHealth / MaxHealth;
+        // Opdater GameManager med den nye sundhed
+        gameManager.UpdatePlayerStats(MaxHealth, DamageToEnemy, AddHealth);
     }
 
     void CheckIfPlayerTakeDamage()
@@ -173,8 +189,7 @@ public class PlayerMove : MonoBehaviour
     }
     void TakeDamage()
     {
-        
-        currentHealth -= testDamage;
+                currentHealth -= testDamage;
         print(currentHealth);
         HealthBar.fillAmount = currentHealth/100f;
     }

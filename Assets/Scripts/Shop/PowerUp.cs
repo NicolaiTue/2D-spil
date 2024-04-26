@@ -15,6 +15,8 @@ public class PowerUp : MonoBehaviour
     public  TextMeshProUGUI moneyText;
     public GameObject Player;
 
+    private GameManager gameManager;
+
     private void Start()
     {
         // Hent lydkilden fra mønten
@@ -28,36 +30,47 @@ public class PowerUp : MonoBehaviour
         }
 
         moneyText.text = "Price: "+price.ToString();
+        gameManager = GameManager.instance;
     }
 
     public void Play()
     {
-        
 
-            if (!SubtractMoney)
-            {
-                GameManager.instance.SubtractMoney(price);
-                SubtractMoney = true;
-            }
 
-            // Afspil lyden for møntopsamling, hvis det ikke allerede er gjort
-            if (!SubtractMoney && buySound != null)
+        if (gameManager.GetMoney() >= price)
+        {
+            gameManager.SubtractMoney(price);
+            SubtractMoney = true;
+
+            // Play buy sound
+            if (buySound != null)
             {
                 AudioSource.PlayClipAtPoint(buySound, transform.position);
             }
 
+            // Øg spillerens maksimale sundhed
+            Player.GetComponent<PlayerMove>().MaxHealth += maxHealthIncrease;
 
-        // Øg spillerens maksimale sundhed
-        Player.GetComponent<PlayerMove>().MaxHealth += maxHealthIncrease;
+            // Øg skaden, som spilleren gør mod fjender
+            Player.GetComponent<PlayerMove>().DamageToEnemy += damageToEnemyIncrease;
 
-        // Øg skaden, som spilleren gør mod fjender
-        Player.GetComponent<PlayerMove>().DamageToEnemy += damageToEnemyIncrease;
-
-        // Tilføj sundhed til spilleren
-        Player.GetComponent<PlayerMove>().AddHealth += healthToAdd;
+            // Tilføj sundhed til spilleren
+            Player.GetComponent<PlayerMove>().AddHealth += healthToAdd;
 
             // Deaktiverer objektet, når power-up'en er blevet aktiveret
             gameObject.SetActive(false);
+
+           
+        }
+        else
+        {
+            Debug.Log("Not enough money!");
+        }
+
+        
+
+           
+        
         
     }
 }
