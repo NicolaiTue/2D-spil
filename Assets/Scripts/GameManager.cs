@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
 
 
     // Player stats
-    private float playerMaxHealth;
-    private int playerDamageToEnemy;
-    private int playerAddHealth;
+    private float playerMaxHealth = 100;
+    private int playerDamageToEnemy = 15;
+    private int playerAddHealth = 25;
 
     // Definition af en statisk begivenhed for at signalere, når pengemængden ændres
     public delegate void MoneyChanged();

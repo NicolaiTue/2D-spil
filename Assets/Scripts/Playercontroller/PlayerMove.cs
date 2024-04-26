@@ -54,15 +54,10 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         gameManager = GameManager.instance;
-
-        float maxHealth = gameManager.GetPlayerMaxHealth();
-        int addHealth = gameManager.GetPlayerAddHealth();
-        int damageToEnemy = gameManager.GetPlayerDamageToEnemy();
-
-        MaxHealth = maxHealth;
-        AddHealth = addHealth;
-
-        DamageToEnemy = damageToEnemy;
+        MaxHealth = gameManager.GetPlayerMaxHealth(); 
+        AddHealth = gameManager.GetPlayerAddHealth();
+        DamageToEnemy = gameManager.GetPlayerDamageToEnemy();
+        print(MaxHealth);
 
 
 
