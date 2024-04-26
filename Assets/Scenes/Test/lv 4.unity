@@ -38205,11 +38205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Liv
-      value: 250
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: speed
-      value: 1.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: Damage
@@ -38225,7 +38225,7 @@ PrefabInstance:
       objectReference: {fileID: 1856316161}
     - target: {fileID: 7766118921730469687, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: attackdetectionRadius
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
