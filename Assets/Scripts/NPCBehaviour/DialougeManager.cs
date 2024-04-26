@@ -35,15 +35,20 @@ public class DialougeManager : MonoBehaviour
     public int DNAnswer;
     public UnityEvent AcceptDelivery;
     public UnityEvent RefuseDelivery;
+    public UnityEvent Delivery2Event;
+    public UnityEvent NormalEvent;
 
     public DialougeTrigger dialougeTrigger;
     //public Transform playerCamera;
 
     public int currentDialougeIndex = 0;
 
+    [Header("NPC Type")]
     public bool IsTraveller = false;
     public bool IsMissionGiver = false;
     public bool IsDelivery =false;
+    public bool Delivery2 = false;
+    public bool NormalNPC = false;
 
     private void Start()
     {
@@ -185,7 +190,23 @@ public class DialougeManager : MonoBehaviour
         {
             RefuseDelivery.Invoke();
         }
+        if (Delivery2 && currentDialougeIndex == PAnswer)
+        {
+            Delivery2Event.Invoke();
+        }
+        if (NormalNPC)
+        {
+            NormalEvent.Invoke();
+        }
         
+    }
+    public void NormalNPCWithTalkReciver(bool NPCState)
+    {
+        NormalNPC = NPCState;
+    }
+    public void Delivery2Reciver(bool DeliveryFromScript)
+    {
+        Delivery2 = DeliveryFromScript;
     }
     public void DeliveryMissionReciver(int P, int N, bool IsDeliveryMission)
     {

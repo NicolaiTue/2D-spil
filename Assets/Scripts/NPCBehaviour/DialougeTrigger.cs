@@ -14,17 +14,21 @@ public class DialougeTrigger : MonoBehaviour
     public NPCManager nPCManager;
     public int NPCNumber;
     public bool IsNpcTraveller = false;
+    public bool IsThisAMissionGiver = false;
+    public bool IsDelivery = false;
+    public bool Delivery2 = false;
 
     [Header("Travel")]
     public int WitchSceneIsTravel;
 
     [Header("Mission Selection & Settings")]
-    public bool IsThisAMissionGiver = false;
+    
     public int NegativAnswer;
     public int PositivAnswer;
-    public bool IsDelivery;
+    
     public int DPAnswer;
     public int DNAnswer;
+    
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -45,6 +49,14 @@ public class DialougeTrigger : MonoBehaviour
         if (IsDelivery)
         {
             other.gameObject.GetComponent<DialougeManager>().DeliveryMissionReciver(DPAnswer, DNAnswer, IsDelivery);
+        }
+        if (Delivery2)
+        {
+            other.gameObject.GetComponent<DialougeManager>().Delivery2Reciver(Delivery2);
+        }
+        if (!IsDelivery && !Delivery2 && !IsThisAMissionGiver && !IsNpcTraveller)
+        {
+            other.gameObject.GetComponent<DialougeManager>().NormalNPCWithTalkReciver(true);
         }
     }
     

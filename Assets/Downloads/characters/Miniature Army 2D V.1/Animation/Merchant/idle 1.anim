@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: idle
+  m_Name: idle 1
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -364,9 +364,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300022, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
+      value: {fileID: 21300066, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
     - time: 1
-      value: {fileID: 21300022, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
+      value: {fileID: 21300066, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
     - time: 1.0166667
       value: {fileID: 21300066, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
     attribute: m_Sprite
@@ -377,9 +377,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300024, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
+      value: {fileID: 21300068, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
     - time: 1
-      value: {fileID: 21300024, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
+      value: {fileID: 21300068, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
     attribute: m_Sprite
     path: Body/Front arm
     classID: 212
@@ -568,11 +568,11 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300022, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
-    - {fileID: 21300022, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
     - {fileID: 21300066, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
-    - {fileID: 21300024, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
-    - {fileID: 21300024, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
+    - {fileID: 21300066, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
+    - {fileID: 21300066, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
+    - {fileID: 21300068, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
+    - {fileID: 21300068, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
     - {fileID: 21300050, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
     - {fileID: 21300050, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
     - {fileID: 21300050, guid: 15b2d2faaecad4bfb9edc6585d94f509, type: 3}
