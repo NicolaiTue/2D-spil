@@ -17,12 +17,11 @@ public class Quest2Start : MonoBehaviour
     {
         print("RefusedMission");
         Destroy(Barn);
-        Refuse.Invoke();
     }
     public void Delivery()
     {
         print("Acceptet Mision");
-        Destroy(Barn);
+        //Barn.enabled = false;
         Destroy(BarnObject);
         Barn2object.SetActive(true);
     }
