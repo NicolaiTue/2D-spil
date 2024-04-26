@@ -55,6 +55,17 @@ public class PlayerMove : MonoBehaviour
     {
         gameManager = GameManager.instance;
 
+        float maxHealth = gameManager.GetPlayerMaxHealth();
+        int addHealth = gameManager.GetPlayerAddHealth();
+        int damageToEnemy = gameManager.GetPlayerDamageToEnemy();
+
+        MaxHealth = maxHealth;
+        AddHealth = addHealth;
+
+        DamageToEnemy = damageToEnemy;
+
+
+
         Time.timeScale = 1f;
         animator = GetComponent<Animator>();
 
@@ -72,13 +83,7 @@ public class PlayerMove : MonoBehaviour
         }
         Cursor.lockState = CursorLockMode.Locked;
 
-        float maxHealth = gameManager.GetPlayerMaxHealth();
-        int damageToEnemy = gameManager.GetPlayerDamageToEnemy();
-        int addHealth = gameManager.GetPlayerAddHealth();
-
-        MaxHealth = maxHealth;
-        DamageToEnemy = damageToEnemy;
-        AddHealth = addHealth;
+        
 
 
     }
@@ -140,8 +145,7 @@ public class PlayerMove : MonoBehaviour
             // Update the HealthBar
             HealthBar.fillAmount = currentHealth / MaxHealth;
 
-            // Optionally, disable the health object after player collides with it
-            //collision.gameObject.SetActive(false);
+                        
         }
     }
 
@@ -171,11 +175,11 @@ public class PlayerMove : MonoBehaviour
     public void TakeDamageFromEnemy(float damage)
     {
         
+
         currentHealth -= damage;
         print(currentHealth);
         HealthBar.fillAmount = currentHealth / MaxHealth;
-        // Opdater GameManager med den nye sundhed
-        gameManager.UpdatePlayerStats(MaxHealth, DamageToEnemy, AddHealth);
+        // Opdater GameManager med den nye sundhed        
     }
 
     void CheckIfPlayerTakeDamage()
@@ -189,9 +193,10 @@ public class PlayerMove : MonoBehaviour
     }
     void TakeDamage()
     {
-                currentHealth -= testDamage;
+        currentHealth -= testDamage;
         print(currentHealth);
         HealthBar.fillAmount = currentHealth/100f;
+
     }
 
     void attack()
