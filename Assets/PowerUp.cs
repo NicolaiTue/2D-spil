@@ -33,8 +33,6 @@ public class PowerUp : MonoBehaviour
     {
         PlayerMove player = GetComponent<PlayerMove>();
 
-        if (player != null)
-        {
             if (!SubtractMoney)
             {
                 GameManager.instance.SubtractMoney(price);
@@ -59,6 +57,6 @@ public class PowerUp : MonoBehaviour
 
             // Deaktiverer objektet, når power-up'en er blevet aktiveret
             gameObject.SetActive(false);
-        }
+        
     }
 }

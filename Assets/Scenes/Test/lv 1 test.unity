@@ -3604,6 +3604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadMerchant
       objectReference: {fileID: 0}
+    - target: {fileID: 4604436483797034223, guid: 358dae7a6b46bf64a8a11f809783fef1, type: 3}
+      propertyPath: shopPanel
+      value: 
+      objectReference: {fileID: 1690028970}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34042,6 +34046,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1910680728796051097, guid: 8c2826bd336f760498a86f971b1d70ab, type: 3}
   m_PrefabInstance: {fileID: 1690028968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1690028970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 190028868187045614, guid: 8c2826bd336f760498a86f971b1d70ab, type: 3}
+  m_PrefabInstance: {fileID: 1690028968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1690154583
 GameObject:
   m_ObjectHideFlags: 0
@@ -36815,6 +36824,14 @@ PrefabInstance:
     - target: {fileID: 793164816024555602, guid: 80edc416dca32e74081a69079f62b7a5, type: 3}
       propertyPath: m_Name
       value: CanvasDialouge
+      objectReference: {fileID: 0}
+    - target: {fileID: 3977998646341221498, guid: 80edc416dca32e74081a69079f62b7a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.233
+      objectReference: {fileID: 0}
+    - target: {fileID: 3977998646341221498, guid: 80edc416dca32e74081a69079f62b7a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -413.206
       objectReference: {fileID: 0}
     - target: {fileID: 7642981538077970709, guid: 80edc416dca32e74081a69079f62b7a5, type: 3}
       propertyPath: m_Pivot.x
