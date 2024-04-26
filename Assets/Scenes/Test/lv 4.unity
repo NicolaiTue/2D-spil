@@ -39568,7 +39568,7 @@ PrefabInstance:
     - target: {fileID: 1096735996136120663, guid: 4d2c8875636befa4ab03777241de85d2, type: 3}
       propertyPath: pickupSound
       value: 
-      objectReference: {fileID: 8300000, guid: 74e6b3a68aec243f8ace89e051030864, type: 3}
+      objectReference: {fileID: 8300000, guid: 03b28d4c7405e4fa3864377a171cf308, type: 3}
     - target: {fileID: 5060286941393146210, guid: 4d2c8875636befa4ab03777241de85d2, type: 3}
       propertyPath: m_Name
       value: Lyd
