@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3173076518257558991, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
+      propertyPath: chest
+      value: 
+      objectReference: {fileID: 4847278304412807011}
+    - target: {fileID: 3173076518257558991, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
       propertyPath: coinPrefab
       value: 
       objectReference: {fileID: 3663365182313970196, guid: c63a0745cba468d41bc319fd0ca288a2, type: 3}
@@ -30,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6930122694965717508, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
       propertyPath: m_Name
-      value: PF Village Props - Chest Wooden Variant
+      value: kiste
       objectReference: {fileID: 0}
     - target: {fileID: 6930122694965717509, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,3 +81,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
+--- !u!114 &4847278304412807011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3173076518257558991, guid: f98d0f39fcc67a34f844abd8a50f2c03, type: 3}
+  m_PrefabInstance: {fileID: 8020336611409242796}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564a40ab997e88549a733c999c980526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
