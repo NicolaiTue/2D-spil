@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.000013, y: 24}
+  m_AnchoredPosition: {x: 16.000013, y: 20.9}
   m_SizeDelta: {x: 70, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1386384841881529835
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Small attack increase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -151,7 +151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1910680728796051097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Health powerup
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -454,7 +454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.000013, y: 24}
+  m_AnchoredPosition: {x: 16.000013, y: 23.7}
   m_SizeDelta: {x: 70, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5865479095247214786
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Maxhealth increase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -779,8 +779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthIncrease: 10
   damageToEnemyIncrease: 0
-  healthToAdd: 0
-  price: 10
+  healthToAdd: 20
+  price: 25
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 967486691065645295}
 --- !u!1 &617241670423241431
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef5b3660a018fe44b3fbd995fe8c11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthIncrease: 10
+  maxHealthIncrease: 5
   damageToEnemyIncrease: 0
   healthToAdd: 0
   price: 10
@@ -1297,7 +1297,7 @@ MonoBehaviour:
   maxHealthIncrease: 10
   damageToEnemyIncrease: 0
   healthToAdd: 0
-  price: 10
+  price: 20
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 7625086589974844019}
 --- !u!1 &1033102219935542933
@@ -1582,10 +1582,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef5b3660a018fe44b3fbd995fe8c11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthIncrease: 10
-  damageToEnemyIncrease: 0
+  maxHealthIncrease: 0
+  damageToEnemyIncrease: 10
   healthToAdd: 0
-  price: 10
+  price: 15
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 2904883818351256370}
 --- !u!1 &1172541039288553285
@@ -1811,10 +1811,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef5b3660a018fe44b3fbd995fe8c11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthIncrease: 10
-  damageToEnemyIncrease: 0
-  healthToAdd: 0
-  price: 10
+  maxHealthIncrease: 6
+  damageToEnemyIncrease: 6
+  healthToAdd: 6
+  price: 20
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 3948843373328054827}
 --- !u!1 &2045238644146536527
@@ -1965,9 +1965,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef5b3660a018fe44b3fbd995fe8c11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthIncrease: 10
+  maxHealthIncrease: 0
   damageToEnemyIncrease: 0
-  healthToAdd: 0
+  healthToAdd: 5
   price: 10
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 2446094099061277597}
@@ -2119,10 +2119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef5b3660a018fe44b3fbd995fe8c11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthIncrease: 10
-  damageToEnemyIncrease: 0
-  healthToAdd: 0
-  price: 10
+  maxHealthIncrease: 0
+  damageToEnemyIncrease: 5
+  healthToAdd: 5
+  price: 15
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 1829116271312474643}
 --- !u!1 &2947863233988535065
@@ -2407,10 +2407,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef5b3660a018fe44b3fbd995fe8c11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthIncrease: 10
+  maxHealthIncrease: 6
   damageToEnemyIncrease: 0
   healthToAdd: 0
-  price: 10
+  price: 12
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 6844395512734922475}
 --- !u!1 &3371347178762600366
@@ -2971,7 +2971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Attack increase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3105,7 +3105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: All increase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3208,7 +3208,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.000013, y: 24}
+  m_AnchoredPosition: {x: 16.000013, y: 21.4}
   m_SizeDelta: {x: 70, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &392768735145142188
@@ -3239,7 +3239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Small maxhealth increase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3666,9 +3666,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthIncrease: 10
-  damageToEnemyIncrease: 0
+  damageToEnemyIncrease: 20
   healthToAdd: 0
-  price: 10
+  price: 35
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 5699648781279390244}
 --- !u!1 &5971618626327065345
@@ -3705,7 +3705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.000013, y: 24}
+  m_AnchoredPosition: {x: 16.000013, y: 19.3}
   m_SizeDelta: {x: 70, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2531210538552514892
@@ -3736,7 +3736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Small Heal increase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3839,7 +3839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.000013, y: 24}
+  m_AnchoredPosition: {x: 16.000013, y: 23.5}
   m_SizeDelta: {x: 70, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6459144723615835332
@@ -3870,7 +3870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Heal increase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4107,7 +4107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.000013, y: 24}
+  m_AnchoredPosition: {x: 16.000013, y: 20.9}
   m_SizeDelta: {x: 70, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9096520109008744277
@@ -4138,7 +4138,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Small Maxhealth increase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4775,7 +4775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: All increas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5126,10 +5126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef5b3660a018fe44b3fbd995fe8c11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthIncrease: 10
-  damageToEnemyIncrease: 0
-  healthToAdd: 0
-  price: 10
+  maxHealthIncrease: 5
+  damageToEnemyIncrease: 5
+  healthToAdd: 5
+  price: 25
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 8832722379254070873}
 --- !u!1 &9050110972184607853
