@@ -7,6 +7,7 @@ namespace Cainos.PixelArtPlatformer_VillageProps
 {
     public class Chest : MonoBehaviour
     {
+        public Chest chest;
         [FoldoutGroup("Reference")]
         public Animator animator;
 
@@ -24,6 +25,7 @@ namespace Cainos.PixelArtPlatformer_VillageProps
                 if (isOpened)
                 {
                     SpawnCoins();
+                    Destroy(chest);
                 }
             }
         }
