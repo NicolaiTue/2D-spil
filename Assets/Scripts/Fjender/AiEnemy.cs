@@ -34,8 +34,8 @@ public class AiEnemy : MonoBehaviour
     [SerializeField] Image EHealthBar;
     Collider2D ECollider;
 
-    public int minMoneyOnDeath = 5; // Minimum antal penge, fjenden kan give, når den dør
-    public int maxMoneyOnDeath = 15; // Maksimum antal penge, fjenden kan give, når den dør
+    public int minMoneyOnDeath = 0; // Minimum antal penge, fjenden kan give, når den dør
+    public int maxMoneyOnDeath = 3; // Maksimum antal penge, fjenden kan give, når den dør
 
     private int newz = 0;
 

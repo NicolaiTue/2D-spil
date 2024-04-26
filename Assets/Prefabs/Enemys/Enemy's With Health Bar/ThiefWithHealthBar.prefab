@@ -226,8 +226,8 @@ MonoBehaviour:
   "D\xF8": 
   Liv: 100
   EHealthBar: {fileID: 8920680398629982637}
-  minMoneyOnDeath: 5
-  maxMoneyOnDeath: 15
+  minMoneyOnDeath: 0
+  maxMoneyOnDeath: 3
   attackSound: {fileID: 8300000, guid: 2375dadc4293d3f4380b59887ce8416b, type: 3}
   DeathSound0: {fileID: 8300000, guid: d30c820ff550c794a86e903ad647e4ee, type: 3}
   DeathSound1: {fileID: 8300000, guid: 73a158e99ad07154280d61719abe8d6c, type: 3}
