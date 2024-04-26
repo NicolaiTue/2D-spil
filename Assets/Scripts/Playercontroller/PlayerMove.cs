@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour
     public float MaxHealth = 100;
     public bool takeDamage = false;
     public float testDamage = 80;
-    float currentHealth;
+    public float currentHealth;
 
     public int AddHealth = 25;
     [Header("Damage To Enemy")]

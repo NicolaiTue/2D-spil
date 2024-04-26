@@ -13,6 +13,7 @@ public class PowerUp : MonoBehaviour
     public AudioClip buySound;
     private AudioSource audioSource;
     public  TextMeshProUGUI moneyText;
+    public GameObject Player;
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class PowerUp : MonoBehaviour
 
     public void Play()
     {
-        PlayerMove player = GetComponent<PlayerMove>();
+        
 
             if (!SubtractMoney)
             {
@@ -46,14 +47,14 @@ public class PowerUp : MonoBehaviour
             }
 
 
-            // Øg spillerens maksimale sundhed
-            player.MaxHealth += maxHealthIncrease;
+        // Øg spillerens maksimale sundhed
+        Player.GetComponent<PlayerMove>().MaxHealth += maxHealthIncrease;
 
-            // Øg skaden, som spilleren gør mod fjender
-            player.DamageToEnemy += damageToEnemyIncrease;
+        // Øg skaden, som spilleren gør mod fjender
+        Player.GetComponent<PlayerMove>().DamageToEnemy += damageToEnemyIncrease;
 
-            // Tilføj sundhed til spilleren
-            player.AddHealth += healthToAdd;
+        // Tilføj sundhed til spilleren
+        Player.GetComponent<PlayerMove>().AddHealth += healthToAdd;
 
             // Deaktiverer objektet, når power-up'en er blevet aktiveret
             gameObject.SetActive(false);
