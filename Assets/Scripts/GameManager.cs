@@ -87,9 +87,6 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt(moneyKey, money);
         PlayerPrefs.SetInt(moraleKey, morale);
-        PlayerPrefs.SetFloat(maxHealthKey, playerMaxHealth);
-        PlayerPrefs.SetInt(damageToEnemyKey, playerDamageToEnemy);
-        PlayerPrefs.SetInt(addHealthKey, playerAddHealth);
         PlayerPrefs.Save();
     }
 
@@ -98,9 +95,7 @@ public class GameManager : MonoBehaviour
     {
         money = PlayerPrefs.GetInt(moneyKey, 0);
         morale = PlayerPrefs.GetInt(moraleKey, 50); // Default morale value of 50
-        playerMaxHealth = PlayerPrefs.GetFloat(maxHealthKey, 100); // Default max health value of 100
-        playerDamageToEnemy = PlayerPrefs.GetInt(damageToEnemyKey, 30); // Default damage to enemy value of 30
-        playerAddHealth = PlayerPrefs.GetInt(addHealthKey, 25); // Default add health value of 25
+        
 
     }
 
@@ -123,16 +118,14 @@ public class GameManager : MonoBehaviour
         return morale;
     }
 
-    // Methods to update player stats
     public void UpdatePlayerStats(float maxHealth, int damageToEnemy, int addHealth)
     {
         playerMaxHealth = maxHealth;
         playerDamageToEnemy = damageToEnemy;
         playerAddHealth = addHealth;
-        SaveData();
     }
 
-    // Methods to get player stats
+    // Metoder til at få spillerens sundhedsoplysninger
     public float GetPlayerMaxHealth()
     {
         return playerMaxHealth;

@@ -35,8 +35,6 @@ public class PowerUp : MonoBehaviour
 
     public void Play()
     {
-
-
         if (gameManager.GetMoney() >= price)
         {
             gameManager.SubtractMoney(price);
@@ -57,20 +55,17 @@ public class PowerUp : MonoBehaviour
             // Tilføj sundhed til spilleren
             Player.GetComponent<PlayerMove>().AddHealth += healthToAdd;
 
+            // Opdater GameManager-variablerne
+            gameManager.UpdatePlayerStats(Player.GetComponent<PlayerMove>().MaxHealth,
+                                          Player.GetComponent<PlayerMove>().DamageToEnemy,
+                                          Player.GetComponent<PlayerMove>().AddHealth);
+
             // Deaktiverer objektet, når power-up'en er blevet aktiveret
             gameObject.SetActive(false);
-
-           
         }
         else
         {
             Debug.Log("Not enough money!");
         }
-
-        
-
-           
-        
-        
     }
 }
