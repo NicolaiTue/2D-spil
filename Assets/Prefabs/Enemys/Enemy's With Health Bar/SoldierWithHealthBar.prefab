@@ -615,7 +615,7 @@ MonoBehaviour:
   Damage: 15
   DMGAllow: 0
   "D\xF8": 
-  Liv: 100
+  Liv: 125
   EHealthBar: {fileID: 2898216916979269794}
   minMoneyOnDeath: 0
   maxMoneyOnDeath: 3

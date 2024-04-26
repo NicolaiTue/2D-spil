@@ -80,10 +80,10 @@ MonoBehaviour:
   playerInRange: 0
   attackSpace: 0.9
   detectionRadius: 15
-  Damage: 30
+  Damage: 25
   DMGAllow: 0
   "D\xF8": 
-  Liv: 100
+  Liv: 150
   EHealthBar: {fileID: 3732137751168972937}
   minMoneyOnDeath: 0
   maxMoneyOnDeath: 3

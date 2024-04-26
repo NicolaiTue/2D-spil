@@ -1522,8 +1522,16 @@ MonoBehaviour:
   Damage: 5
   DMGAllow: 0
   "D\xF8": 
-  Liv: 100
+  Liv: 120
   EHealthBar: {fileID: 2459956822512777180}
+  minMoneyOnDeath: 0
+  maxMoneyOnDeath: 3
+  attackSound: {fileID: 0}
+  DeathSound0: {fileID: 0}
+  DeathSound1: {fileID: 0}
+  DeathSound2: {fileID: 0}
+  DeathSound3: {fileID: 0}
+  DeathSound4: {fileID: 0}
 --- !u!50 &8824653275876256874
 Rigidbody2D:
   serializedVersion: 4
