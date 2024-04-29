@@ -34691,7 +34691,7 @@ MonoBehaviour:
     endDialougeEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: I am i need of your help.
+  - text: I am in need of your help.
     isEnded: 0
     isQuestion: 0
     AnswerOption01: 

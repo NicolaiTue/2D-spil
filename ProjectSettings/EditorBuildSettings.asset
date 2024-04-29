@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Test/Test Tirsgaard.unity
     guid: 19827724c6772aa47922cb42450f01dd
+  - enabled: 1
+    path: "Assets/Scenes/F\xE6rdig/Tutorial Scene.unity"
+    guid: 24a5b8d4934d3804c9a65b9c5a0aebba
   m_configObjects: {}
