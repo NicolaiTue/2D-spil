@@ -37984,6 +37984,10 @@ PrefabInstance:
       propertyPath: dialougeParent
       value: 
       objectReference: {fileID: 186115227}
+    - target: {fileID: 5504341608191072347, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5702254723339642843, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: HealthBar
       value: 
