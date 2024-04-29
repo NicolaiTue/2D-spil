@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test/lv 4.unity
     guid: 7a0dc4fb6afc32b4282ebc2dffd5ca67
+  - enabled: 1
+    path: Assets/Scenes/Test/CutsceneLose.unity
+    guid: 41584fb497d18c34bb03d763a5087212
   - enabled: 0
     path: Assets/Scenes/Test/Jonas.unity
     guid: a389c7c934d02ea48b4cd36dd41ddd45
