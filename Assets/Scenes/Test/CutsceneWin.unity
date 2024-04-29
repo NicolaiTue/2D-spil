@@ -482,7 +482,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 634398434}
-        m_TargetAssemblyTypeName: SceneLoader1, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneLoaderWin, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 634398429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2fa429d9685824795fd582d8798d3f, type: 3}
+  m_Script: {fileID: 11500000, guid: e9dab813d679eec4dab343569c60d968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1407333641
@@ -702,7 +702,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629963404}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 0924ee26300168349bbbb16264acd160, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 9e1af34d2333d384d99ce04892ef4c9e, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 525633376}
