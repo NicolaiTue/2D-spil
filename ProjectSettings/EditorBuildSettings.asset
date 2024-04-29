@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: "Assets/Scenes/F\xE6rdig/Start menu.unity"
     guid: 8fed099e4df3eca489f22f77d72025dc
   - enabled: 1
-    path: Assets/Scenes/Test/lv 1 test.unity
-    guid: 21919bbd7f345dc49a0b1006ba08dd2b
-  - enabled: 1
     path: Assets/Scenes/Test/Jonas.unity
     guid: a389c7c934d02ea48b4cd36dd41ddd45
+  - enabled: 1
+    path: Assets/Scenes/Test/lv 1 test.unity
+    guid: 21919bbd7f345dc49a0b1006ba08dd2b
   - enabled: 1
     path: "Assets/Scenes/F\xE6rdig/Tutorial Scene.unity"
     guid: 24a5b8d4934d3804c9a65b9c5a0aebba
