@@ -11,6 +11,9 @@ public class Quest2Start : MonoBehaviour
     public GameObject Barn2object;
     public UnityEvent Deliver;
     public UnityEvent Refuse;
+    public float timeDelay;
+    float newTime;
+    bool startTimer = false;
 
 
     public void RefuseMission()
@@ -21,8 +24,21 @@ public class Quest2Start : MonoBehaviour
     public void Delivery()
     {
         print("Acceptet Mision");
-        //Barn.enabled = false;
-        Destroy(BarnObject);
-        Barn2object.SetActive(true);
+        newTime = Time.time + timeDelay;
+        startTimer = true;
+        Destroy(Barn);
+
+
+
+    }
+    private void Update()
+    {
+        
+        if (Time.time > newTime && startTimer)
+        {
+
+            Barn2object.SetActive(true);
+            Destroy(BarnObject);
+        }
     }
 }
