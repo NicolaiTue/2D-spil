@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player0
       objectReference: {fileID: 0}
+    - target: {fileID: 3121373156171150745, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3305656493215600407, guid: 85572f791c2355c428dfa74809ed813e, type: 3}
       propertyPath: orthographic size
       value: 8
@@ -114,5 +118,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  MissionEventsP:
+    m_PersistentCalls:
+      m_Calls: []
+  MissionEventsN:
+    m_PersistentCalls:
+      m_Calls: []
+  PAnswer: 0
+  NAnswer: 0
+  DPAnswer: 0
+  DNAnswer: 0
+  AcceptDelivery:
+    m_PersistentCalls:
+      m_Calls: []
+  RefuseDelivery:
+    m_PersistentCalls:
+      m_Calls: []
+  Delivery2Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NormalEvent:
+    m_PersistentCalls:
+      m_Calls: []
   dialougeTrigger: {fileID: 0}
+  currentDialougeIndex: 0
   IsTraveller: 0
+  IsMissionGiver: 0
+  IsDelivery: 0
+  Delivery2: 0
+  NormalNPC: 0
