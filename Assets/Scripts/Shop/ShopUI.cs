@@ -33,12 +33,14 @@ public class ShopUI : MonoBehaviour
             {
                 // Aktiverer shopPanelet, hvis det ikke allerede er aktivt
                 shopPanel.SetActive(true);
+                Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;
             }
             else
             {
                 // Deaktiverer shopPanelet, hvis det allerede er aktivt
                 shopPanel.SetActive(false);
+                Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
             }
         }

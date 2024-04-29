@@ -10,22 +10,21 @@ public class EscMenu : MonoBehaviour
     private void Start()
     {
         escMenu.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Esc") && !MenuActive)
         {
-            escMenu.SetActive(true);
-            MenuActive = true;
             Freez();
         }
         else if (Input.GetButtonDown("Esc") && MenuActive)
-        {
-            escMenu.SetActive(false);
-            MenuActive = false;
+        {           
             Unfreez();
         }
+       
     }
     public void MainMenu()
     {
@@ -33,10 +32,20 @@ public class EscMenu : MonoBehaviour
     }
     public void Unfreez()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        escMenu.SetActive(false);
         Time.timeScale = 1f;
+        MenuActive = false;
+        
     }
     public void Freez()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        escMenu.SetActive(true);
         Time.timeScale = 0f;
+        MenuActive = true;
+        
     }
 }

@@ -413,6 +413,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Esc Menu_Husk_Brug_Script
       objectReference: {fileID: 0}
+    - target: {fileID: 3923417952643165146, guid: fe348b058effc8944be51dc372bd4fab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6392749975963086688}
+    - target: {fileID: 3923417952643165146, guid: fe348b058effc8944be51dc372bd4fab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Unfreez
+      objectReference: {fileID: 0}
     - target: {fileID: 5009112665495598743, guid: fe348b058effc8944be51dc372bd4fab, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

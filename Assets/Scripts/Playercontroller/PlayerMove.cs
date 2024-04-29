@@ -80,7 +80,7 @@ public class PlayerMove : MonoBehaviour
             audioSource.playOnAwake = false;
             audioSource.clip = attackSound;
         }
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 
         
 
@@ -198,7 +198,7 @@ public class PlayerMove : MonoBehaviour
 
     void attack()
     {
-        if (Input.GetButtonDown("LeftClick") && !isInMenu)
+        if (Input.GetButtonDown("LeftClick"))
         {
             print("you have attacked");
             animator.SetBool("Attack", true);
@@ -223,14 +223,14 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetButtonDown("Esc") && !isInMenu)
         {
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.lockState = CursorLockMode.None;
             print("menu Opened");
             isInMenu = true;
         }
         else if (Input.GetButtonDown("Esc") && isInMenu)
         {
             isInMenu = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
     }
     void checkIfDead()
