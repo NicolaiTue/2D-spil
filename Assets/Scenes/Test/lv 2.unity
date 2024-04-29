@@ -946,7 +946,7 @@ PrefabInstance:
       objectReference: {fileID: 469262634}
     - target: {fileID: 5899836002301268597, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25
+      value: 245.74
       objectReference: {fileID: 0}
     - target: {fileID: 5899836002301268597, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: m_LocalPosition.y
@@ -58057,6 +58057,10 @@ PrefabInstance:
       propertyPath: attackdetectionRadius
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7932507632267596286, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fe860aa5b90cb33408f13af3bd789bef, type: 2}
     - target: {fileID: 8977632966828123795, guid: 2f19cb6bc2dc61447b2ab516b64011f5, type: 3}
       propertyPath: m_Size.y
       value: 1.8
