@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: "Assets/Scenes/F\xE6rdig/Start menu.unity"
     guid: 8fed099e4df3eca489f22f77d72025dc
   - enabled: 1
-    path: "Assets/Scenes/F\xE6rdig/Tutorial.unity"
-    guid: 24a5b8d4934d3804c9a65b9c5a0aebba
-  - enabled: 1
     path: Assets/Scenes/Test/Cutscene.unity
     guid: bfb060523077bce40bd2a392d9f56ba8
+  - enabled: 1
+    path: "Assets/Scenes/F\xE6rdig/Tutorial.unity"
+    guid: 24a5b8d4934d3804c9a65b9c5a0aebba
   - enabled: 1
     path: Assets/Scenes/Test/Cutscene1.unity
     guid: e7e0ae1a5a791124c8891be6b0b6bc3e
