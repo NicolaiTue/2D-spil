@@ -40489,18 +40489,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScript: {fileID: 1856316161}
   Player: {fileID: 1856316160}
-  speed: 2
+  speed: 3
   Attack: 
   Se: 
   tooSteepAngle: 12
-  attackdetectionRadius: 2.5
+  attackdetectionRadius: 3
   playerInRange: 0
   attackSpace: 1
-  detectionRadius: 15
+  detectionRadius: 25
   Damage: 45
   DMGAllow: 0
   "D\xF8": 
-  Liv: 500
+  Liv: 700
   EHealthBar: {fileID: 3421058031660773512}
   minMoneyOnDeath: 0
   maxMoneyOnDeath: 3
@@ -40520,7 +40520,7 @@ Animator:
   m_GameObject: {fileID: 2707805170174185676}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2245449f889b82640b9b0f03ba29e963, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9102045e713d03449a2d4334fc6cb443, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
