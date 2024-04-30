@@ -2531,6 +2531,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1490712772}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &667235417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33832,8 +33844,8 @@ MonoBehaviour:
   WitchSceneIsTravel: 0
   NegativAnswer: 3
   PositivAnswer: 2
-  DPAnswer: 0
-  DNAnswer: 0
+  DPAnswer: 2
+  DNAnswer: 3
 --- !u!4 &1601008013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2374099621955564127, guid: 0b6eea0d82b28544da910ccce87bec9e, type: 3}
