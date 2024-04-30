@@ -783,6 +783,7 @@ MonoBehaviour:
   price: 25
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 967486691065645295}
+  Player: {fileID: 0}
 --- !u!1 &617241670423241431
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +938,7 @@ MonoBehaviour:
   price: 10
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 8998816582954014708}
+  Player: {fileID: 0}
 --- !u!1 &773219646913752384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1302,7 @@ MonoBehaviour:
   price: 20
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 7625086589974844019}
+  Player: {fileID: 0}
 --- !u!1 &1033102219935542933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,11 +1586,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthIncrease: 0
-  damageToEnemyIncrease: 10
+  damageToEnemyIncrease: 8
   healthToAdd: 0
-  price: 15
+  price: 13
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 2904883818351256370}
+  Player: {fileID: 0}
 --- !u!1 &1172541039288553285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,9 +1818,10 @@ MonoBehaviour:
   maxHealthIncrease: 6
   damageToEnemyIncrease: 6
   healthToAdd: 6
-  price: 20
+  price: 30
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 3948843373328054827}
+  Player: {fileID: 0}
 --- !u!1 &2045238644146536527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,6 +1976,7 @@ MonoBehaviour:
   price: 10
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 2446094099061277597}
+  Player: {fileID: 0}
 --- !u!1 &2546126622594483175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,6 +2131,7 @@ MonoBehaviour:
   price: 15
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 1829116271312474643}
+  Player: {fileID: 0}
 --- !u!1 &2947863233988535065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,6 +2420,7 @@ MonoBehaviour:
   price: 12
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 6844395512734922475}
+  Player: {fileID: 0}
 --- !u!1 &3371347178762600366
 GameObject:
   m_ObjectHideFlags: 0
@@ -3668,9 +3676,10 @@ MonoBehaviour:
   maxHealthIncrease: 10
   damageToEnemyIncrease: 20
   healthToAdd: 0
-  price: 35
+  price: 40
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 5699648781279390244}
+  Player: {fileID: 0}
 --- !u!1 &5971618626327065345
 GameObject:
   m_ObjectHideFlags: 0
@@ -5132,6 +5141,7 @@ MonoBehaviour:
   price: 25
   buySound: {fileID: 8300000, guid: d654174ef194bd7479bf4b8d8f753318, type: 3}
   moneyText: {fileID: 8832722379254070873}
+  Player: {fileID: 0}
 --- !u!1 &9050110972184607853
 GameObject:
   m_ObjectHideFlags: 0
