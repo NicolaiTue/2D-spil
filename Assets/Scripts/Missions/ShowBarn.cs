@@ -14,7 +14,7 @@ public class ShowBarn : MonoBehaviour
         newTime = Time.time + timeDelay;
         startTimer = true;
         if (Time.time > newTime && startTimer)
-        {
+        { 
             Barn.SetActive(true);
         }
 
