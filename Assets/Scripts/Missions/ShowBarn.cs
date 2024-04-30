@@ -8,6 +8,7 @@ public class ShowBarn : MonoBehaviour
     public float timeDelay;
     float newTime;
     bool startTimer = false;
+
     public void ShowChild()
     {
         newTime = Time.time + timeDelay;
@@ -16,6 +17,7 @@ public class ShowBarn : MonoBehaviour
         {
             Barn.SetActive(true);
         }
+
         
     }
 }

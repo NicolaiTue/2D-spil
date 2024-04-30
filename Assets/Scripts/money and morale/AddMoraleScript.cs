@@ -8,13 +8,14 @@ public class AddMoraleScript : MonoBehaviour
     public int Moraleamount;
     private bool addedMorale = false; //  for at sikre, at morale kun tilføjes én gang
 
-    private void OnEnable()
+    private void OnDestroy()
     {
         if (!addedMorale)
         {
-            // Tilføj 30 moral, når objektet aktiveres første gang
+            // Tilføj 20 moral, når objektet aktiveres første gang
             GameManager.instance.AddMorale(Moraleamount);
             addedMorale = true; // Sæt addedMorale til sandt for at forhindre gentagen tilføjelse af morale
+            Debug.Log("+20 morale");
         }
     }
 }
