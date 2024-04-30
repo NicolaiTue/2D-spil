@@ -10,6 +10,7 @@ public class Quest : MonoBehaviour
     public DialougeTrigger Præst;
     public UnityEvent PossitivEvent;
     public UnityEvent NegativEvent;
+    public UnityEvent CantPayUp;
 
 
     private void Start()
@@ -20,7 +21,16 @@ public class Quest : MonoBehaviour
     {
         print("Possitiv");
         Destroy(Præst);
-        PossitivEvent.Invoke();
+        int coins = GameManager.instance.GetMoney();
+        if (coins > 10)
+        {
+            PossitivEvent.Invoke();
+        }
+        else
+        {
+            CantPayUp.Invoke();
+        }
+
     }
     public void NegativeAnswer()
     {

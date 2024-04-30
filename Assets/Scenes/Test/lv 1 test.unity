@@ -2437,6 +2437,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  CantPayUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2129883547}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1765104746}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &667235414
 Transform:
   m_ObjectHideFlags: 0
@@ -3044,6 +3071,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1765104745}
+  - {fileID: 2129883546}
   - {fileID: 1962571222}
   - {fileID: 1318239264}
   - {fileID: 1601008013}
@@ -31825,6 +31853,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: NormalEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: MissionEvents.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -31920,6 +31952,10 @@ PrefabInstance:
       propertyPath: MissionEventsP.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 667235413}
+    - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
+      propertyPath: NormalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2893489945537098461, guid: 0de96ebb789e9f341a727853558f2769, type: 3}
       propertyPath: RefuseDelivery.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -36579,6 +36615,170 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4892250884329972, guid: 9cac384616e7c3742adf4682400336f4, type: 3}
   m_PrefabInstance: {fileID: 2118452295}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2129883545
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 803505676}
+    m_Modifications:
+    - target: {fileID: 1954424458449278168, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_Name
+      value: WhitePriest Clone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954424458449278168, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954424458449278168, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -177.3831
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8058884
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1954424458449278168, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2129883549}
+    - targetCorrespondingSourceObject: {fileID: 1954424458449278168, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2129883548}
+  m_SourcePrefab: {fileID: 100100000, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+--- !u!4 &2129883546 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6197331336695029227, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+  m_PrefabInstance: {fileID: 2129883545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2129883547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1954424458449278168, guid: e2a0f98bd2720f5419195a552ffa1290, type: 3}
+  m_PrefabInstance: {fileID: 2129883545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2129883548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129883547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb16294bb72a04b8bff455a5257de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialougeStrings:
+  - text: You dont have enough money.
+    isEnded: 1
+    isQuestion: 0
+    AnswerOption01: 
+    AnswerOption02: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialougeEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  NpcTransform: {fileID: 2129883546}
+  nPCManager: {fileID: 1419353978}
+  NPCNumber: 0
+  IsNpcTraveller: 0
+  IsThisAMissionGiver: 0
+  IsDelivery: 0
+  Delivery2: 0
+  WitchSceneIsTravel: 0
+  NegativAnswer: 0
+  PositivAnswer: 0
+  DPAnswer: 0
+  DNAnswer: 0
+--- !u!61 &2129883549
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129883547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.6805384}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4.361077}
+  m_EdgeRadius: 0
 --- !u!114 &3011399659240170626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2180437342296994741, guid: 80edc416dca32e74081a69079f62b7a5, type: 3}
