@@ -36705,6 +36705,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 803505676}
     m_Modifications:
     - target: {fileID: 1819902968812211574, guid: 457067ce72153b54cacc64135c7e9295, type: 3}
+      propertyPath: IsDelivery
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819902968812211574, guid: 457067ce72153b54cacc64135c7e9295, type: 3}
       propertyPath: nPCManager
       value: 
       objectReference: {fileID: 1419353978}
@@ -36751,6 +36755,10 @@ PrefabInstance:
     - target: {fileID: 5633055128121348671, guid: 457067ce72153b54cacc64135c7e9295, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739765916045195009, guid: 457067ce72153b54cacc64135c7e9295, type: 3}
+      propertyPath: SceneIndex
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
