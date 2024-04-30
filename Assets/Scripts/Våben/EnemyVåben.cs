@@ -5,14 +5,11 @@ using UnityEngine;
 
 public class Våben : MonoBehaviour
 {
-    private AiEnemy aienemy;
+    public AiEnemy aienemy;
 
     public string playerTag = "Player";
 
-    private void Start()
-    {
-        aienemy = GetComponent<AiEnemy>();
-    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (aienemy.DMGAllow == true)
