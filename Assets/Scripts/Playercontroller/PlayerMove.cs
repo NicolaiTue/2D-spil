@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
@@ -63,7 +64,8 @@ public class PlayerMove : MonoBehaviour
         AddHealth = addHealth;        
         DamageToEnemy = damageToEnemy;
 
-
+       
+       
 
         Time.timeScale = 1f;
         animator = GetComponent<Animator>();
@@ -241,9 +243,17 @@ public class PlayerMove : MonoBehaviour
             deathScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
 
+            if (SceneManager.GetActiveScene().name == "Tutorial")
+            {
+                int indexHolder = SceneManager.GetActiveScene().buildIndex;
+                indexHolder++;
+                // Skifter til næste scene
+                SceneManager.LoadScene(indexHolder);
+            }
+
         }
     }
-   
-
-
+    
+    
+    
 }
