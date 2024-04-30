@@ -13,11 +13,12 @@ public class End : MonoBehaviour
         gameManager = GameManager.instance;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // Tjek om kollideret objekt er spilleren
-        if (other.CompareTag("Player"))
+        if (collision.tag == "Player")
         {
+            print("check");
             // Tjek spillerens morale
             int morale = gameManager.GetMorale();
 
