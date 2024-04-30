@@ -7,10 +7,20 @@ public class Quest2End : MonoBehaviour
 {
     public DialougeTrigger Barn2;
     public UnityEvent FinishMission;
+    public UnityEvent CantPayUp;
     public void Delivery()
     {
-        print("Finished Mission 2");
-        Destroy(Barn2);
-        FinishMission.Invoke();
+        int money = GameManager.instance.GetMoney();
+        if (money >= 25) 
+        {
+            print("Finished Mission 2");
+            Destroy(Barn2);
+            FinishMission.Invoke();
+        }
+        else
+        {
+            CantPayUp.Invoke();
+        }
+        
     }
 }
