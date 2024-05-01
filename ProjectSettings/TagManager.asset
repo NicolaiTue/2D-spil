@@ -10,6 +10,7 @@ TagManager:
   - HPbost
   - Dead
   - Shopkeeper
+  - Buttons
   layers:
   - Default
   - TransparentFX
