@@ -6,12 +6,16 @@ public class SceneLoader : MonoBehaviour
 {
     public float timeDelay;
     float newTime;
-    bool startTimer = false;    
+    bool startTimer = false;
 
 
 
-    void start()
+    private void Start()
     {
+        newTime = Time.time + timeDelay;
+        print("Detectet");
+        //startTimer = true;
+        
         CutsceneT();
     }
 
@@ -22,10 +26,13 @@ public class SceneLoader : MonoBehaviour
 
     void CutsceneT()
     {
-        newTime = Time.time + timeDelay;
-        startTimer = true;
-        if (Time.time > newTime && startTimer)
+        
+    }
+    private void Update()
+    {
+        if (Time.time > newTime)
         {
+            print("Detectet In Time");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
