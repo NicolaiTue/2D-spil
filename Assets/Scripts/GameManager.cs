@@ -87,6 +87,11 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt(moneyKey, money);
         PlayerPrefs.SetInt(moraleKey, morale);
+
+        PlayerPrefs.SetFloat(maxHealthKey, playerMaxHealth);
+        PlayerPrefs.SetInt(damageToEnemyKey, playerDamageToEnemy);
+        PlayerPrefs.SetInt(addHealthKey, playerAddHealth);
+
         PlayerPrefs.Save();
     }
 
@@ -94,7 +99,7 @@ public class GameManager : MonoBehaviour
     private void LoadData()
     {
         money = PlayerPrefs.GetInt(moneyKey, 0);
-        morale = PlayerPrefs.GetInt(moraleKey, 50); // Default morale value of 50
+        morale = PlayerPrefs.GetInt(moraleKey, 0); 
         
 
     }
@@ -103,8 +108,12 @@ public class GameManager : MonoBehaviour
     public void ResetData()
     {
         money = 0;
-        morale = 50; // Reset morale to default value
-        SaveData();
+        morale = 0; // Reset morale to default value
+        playerMaxHealth = 100;
+        playerDamageToEnemy = 15;
+        playerAddHealth = 25;
+
+         SaveData();
     }
 
     // Getter methods for money and morale
@@ -125,7 +134,7 @@ public class GameManager : MonoBehaviour
         playerAddHealth = addHealth;
     }
 
-    // Metoder til at få spillerens sundhedsoplysninger
+    // Metoder til at få spillerens hp oplysninger
     public float GetPlayerMaxHealth()
     {
         return playerMaxHealth;
