@@ -27,10 +27,6 @@ public class GameManager : MonoBehaviour
     public delegate void MoneyChanged();
     public static event MoneyChanged OnMoneyChanged;
 
-    
-
-
-
     void Awake()
     {        
         if (instance == null)
@@ -82,7 +78,7 @@ public class GameManager : MonoBehaviour
         OnMoneyChanged?.Invoke(); // Udløser OnMoneyChanged-begivenheden
     }
 
-    // Method to save money and morale to PlayerPrefs
+    // Metode til at gemme  money, morale, maxHealth, damageToEnemy og addHealth til PlayerPrefs
     private void SaveData()
     {
         PlayerPrefs.SetInt(moneyKey, money);
@@ -95,7 +91,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    // Method to load money and morale from PlayerPrefs
+   
     private void LoadData()
     {
         money = PlayerPrefs.GetInt(moneyKey, 0);
@@ -108,7 +104,7 @@ public class GameManager : MonoBehaviour
     public void ResetData()
     {
         money = 0;
-        morale = 0; // Reset morale to default value
+        morale = 0;
         playerMaxHealth = 100;
         playerDamageToEnemy = 15;
         playerAddHealth = 25;
