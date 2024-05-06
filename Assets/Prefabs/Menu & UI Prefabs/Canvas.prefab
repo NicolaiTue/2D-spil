@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 6246616999907317417}
   - component: {fileID: 6392749975963086688}
   - component: {fileID: 5388404555145524107}
+  - component: {fileID: 8044827571062584818}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -205,6 +206,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1904787208158122074}
+--- !u!114 &8044827571062584818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185567776818807521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb1da141a991404b8e60163e52717de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneIndex: 0
 --- !u!1 &8496667002210293200
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +426,18 @@ PrefabInstance:
     - target: {fileID: 1171080126382544938, guid: fe348b058effc8944be51dc372bd4fab, type: 3}
       propertyPath: m_Name
       value: Esc Menu_Husk_Brug_Script
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697783545255230693, guid: fe348b058effc8944be51dc372bd4fab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8044827571062584818}
+    - target: {fileID: 1697783545255230693, guid: fe348b058effc8944be51dc372bd4fab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697783545255230693, guid: fe348b058effc8944be51dc372bd4fab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ToMainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3923417952643165146, guid: fe348b058effc8944be51dc372bd4fab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
