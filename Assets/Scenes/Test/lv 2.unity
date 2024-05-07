@@ -103338,19 +103338,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1608018709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2707805170814551344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a32d0e307cbafe4ab74fc4f6ca3aec0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Moraleamount: 20
 --- !u!1 &1617344410 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3199234433168532602, guid: 4c09aa47d6e0e954f899cb8efe5a6816, type: 3}
@@ -135934,7 +135921,7 @@ GameObject:
   - component: {fileID: 7766118921410583861}
   - component: {fileID: 8977632966978131089}
   - component: {fileID: 8816659044303957081}
-  - component: {fileID: 1608018709}
+  - component: {fileID: 8977632966978131090}
   m_Layer: 7
   m_Name: KnightWithHealthBar
   m_TagString: Enemy
@@ -136976,6 +136963,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1.8}
   m_EdgeRadius: 0
+--- !u!114 &8977632966978131090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2707805170814551344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d90ccc438121349b818e888bbfa01b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9024260487934498023
 Transform:
   m_ObjectHideFlags: 0
