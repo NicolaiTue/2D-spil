@@ -242,6 +242,7 @@ public class PlayerMove : MonoBehaviour
             Time.timeScale = 0f;
             deathScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
             if (SceneManager.GetActiveScene().name == "Tutorial")
             {
