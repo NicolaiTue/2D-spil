@@ -21,9 +21,9 @@ public class End : MonoBehaviour
             print("check");
             // Tjek spillerens morale
             int morale = gameManager.GetMorale();
-
+            Debug.Log(morale);
             // Skift scene baseret på moraleværdien
-            if (morale >= 60)
+            if (morale >= 20)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Skift til næste scene
             }
