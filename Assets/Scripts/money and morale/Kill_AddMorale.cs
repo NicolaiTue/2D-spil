@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Kill_AddMorale : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int Moraleamount;
+    private bool addedMorale = false; //  for at sikre, at morale kun tilføjes én gang
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        if (!addedMorale)
+        {
+            // Tilføj 20 moral, når objektet aktiveres første gang
+            GameManager.instance.AddMorale(10);
+            addedMorale = true; // Sæt addedMorale til sandt for at forhindre gentagen tilføjelse af morale
+            Debug.Log(10);
+        }
     }
 }
